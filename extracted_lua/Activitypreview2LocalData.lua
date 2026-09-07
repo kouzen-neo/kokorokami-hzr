@@ -1,0 +1,17 @@
+Activitypreview2LocalData = {}
+Activitypreview2LocalData.tab = {
+[1] = {1, 40000, "Summer\u{0020}Time\u{0020}Play", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "0", "0", "yx_xh_1", "0", "0", "0"},
+[2] = {2, 40001, "The\u{0020}Promised\u{0020}Casket", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "0", "0", "yx_xh_1", "0", "0", "0"},
+[3] = {3, 40002, "Speedy\u{0020}Food\u{0020}Home\u{0020}Delivery", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "65-V_for_Valentine", "0", "yx_xh_1", "0", "0", "0"},
+[4] = {4, 41000, "The\u{0020}Gap\u{0020}Between\u{0020}The\u{0020}Dream\u{0020}and\u{0020}The\u{0020}Hollow", "0", "0", "900000", "0", "0", "0", "0", "0", "0", "0"},
+[5] = {5, 42000, "Balloon-Popping\u{0020}Mini\u{0020}Game", "0", "0", "0", "2001,2002,2003,2004,2005,2006,2007", "41-Maya-now", "0", "0", "0", "0", "0"},
+[6] = {6, 40005, "Christmas\u{0020}Eve", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "0", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[7] = {7, 40003, "Seaside\u{0020}Crisis\u{0020}Case\u{0020}Files", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "0", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[8] = {8, 40008, "Cosmic\u{0020}Drift\u{0020}Bottle\u{0020}", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "33-Empty_but_not_real", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[9] = {9, 40006, "Phantom\u{0020}Thief's\u{0020}Calling\u{0020}Card", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "0", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[10] = {10, 40011, "Visitors\u{0020}from\u{0020}Another\u{0020}World\u{0020}Once\u{0020}More", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "33-Empty_but_not_real", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[11] = {11, 40004, "Farewell\u{0020}to\u{0020}Sweet\u{0020}Dreams\u{0020}Cast\u{0020}Interview", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju1", "0", "0", "75-Who_am_I", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[12] = {12, 40007, "Tomorrow\u{0020}Interview", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "33-Empty_but_not_real", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+[13] = {13, 40012, "A\u{0020}Casual\u{0020}Summer\u{0020}Chat\u{0020}(Culture\u{0020}Shock\u{0020}Edition)", "Activity/ThreeChooseOne/SummerPreheat", "Activity/ThreeChooseOne/Img_Daoju1;Activity/ThreeChooseOne/Img_Daoju2;Activity/ThreeChooseOne/Img_Daoju3", "0", "0", "33-Empty_but_not_real", "0", "yx_xh_1", "yx_xh_2", "yx_xh_3", "0"},
+}
+return Activitypreview2LocalData

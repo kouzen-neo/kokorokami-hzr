@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haze Companion</string>
+    <string name="app_subtitle">Offline Server Host for Haze Reverb</string>
+    <string name="status_stopped">SERVER STOPPED</string>
+    <string name="status_running">SERVER RUNNING (127.0.0.1)</string>
+    <string name="ports_info">Gateway: 127.0.0.1:8100 | GameServer: 127.0.0.1:8888</string>
+    <string name="btn_start">START SERVER &amp; PLAY</string>
+    <string name="btn_stop">STOP SERVER</string>
+    <string name="btn_launch_game">LAUNCH HAZE REVERB</string>
+    <string name="btn_clear_logs">Clear Logs</string>
+    <string name="dns_redirect_title">Redirect Official Domain</string>
+    <string name="dns_redirect_desc">Redirect cwveren2.feimogames.com -&gt; 127.0.0.1 locally (No root / Hosts Go required)</string>
+    <string name="logs_header">LIVE SERVER LOGS</string>
+    <string name="notif_channel_name">Haze Server Status</string>
+    <string name="notif_running_text">Server is active on 127.0.0.1. Tap to view.</string>
+</resources>

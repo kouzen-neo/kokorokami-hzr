@@ -1,0 +1,25 @@
+SamplevoiceLocalData = {}
+SamplevoiceLocalData.tab = {
+[1] = {1, "Navigator", 1, 1, "sample_linghang_1", "touxiang_linghang"},
+[2] = {2, "Navigator", 1, 1, "sample_linghang_2", "touxiang_linghang"},
+[3] = {3, "Navigator", 1, 1, "sample_linghang_3", "touxiang_linghang"},
+[4] = {4, "Gia", 2, 1, "sample_jiya_1", "touxiang_jiya"},
+[5] = {5, "Gia", 2, 1, "sample_jiya_2", "touxiang_jiya"},
+[6] = {6, "Gia", 2, 1, "sample_jiya_3", "touxiang_jiya"},
+[7] = {7, "Stephanie", 3, 1, "sample_shidifenni_1", "touxiang_shidifenni"},
+[8] = {8, "Stephanie", 3, 1, "sample_shidifenni_2", "touxiang_shidifenni"},
+[9] = {9, "Stephanie", 3, 1, "sample_shidifenni_3", "touxiang_shidifenni"},
+[10] = {10, "Charlissa", 4, 1, "sample_chalisha_1", "touxiang_chalisha"},
+[11] = {11, "Charlissa", 4, 1, "sample_chalisha_2", "touxiang_chalisha"},
+[12] = {12, "Charlissa", 4, 1, "sample_chalisha_3", "touxiang_chalisha"},
+[13] = {13, "Franca", 5, 1, "sample_fulanka_1", "touxiang_fulanka"},
+[14] = {14, "Franca", 5, 1, "sample_fulanka_2", "touxiang_fulanka"},
+[15] = {15, "Franca", 5, 1, "sample_fulanka_3", "touxiang_fulanka"},
+[16] = {16, "Julius", 6, 1, "sample_zhuliwusi_1", "touxiang_zhuliwusi"},
+[17] = {17, "Julius", 6, 1, "sample_zhuliwusi_2", "touxiang_zhuliwusi"},
+[18] = {18, "Julius", 6, 1, "sample_zhuliwusi_3", "touxiang_zhuliwusi"},
+[19] = {19, "Others", 7, 1, "sample_other_1", "touxiang_qita"},
+[20] = {20, "Others", 7, 1, "sample_other_2", "touxiang_qita"},
+[21] = {21, "Others", 7, 1, "sample_other_3", "touxiang_qita"},
+}
+return SamplevoiceLocalData

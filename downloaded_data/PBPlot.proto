@@ -1,0 +1,222 @@
+// Generated from ProtoAll.bytes
+syntax = "proto3";
+package PBPlot;
+
+message Plot {
+  repeated Curtain curtains = 1;
+}
+
+message Curtain {
+  string uuid = 1;
+  int32 layer = 2;
+  int32 jump_Time = 3;
+  bool isClearBtmLast = 4;
+  bool isClearTopLast = 5;
+  bool isClearUSMLast = 6;
+  repeated Image btmImages = 7;
+  repeated Image topImages = 8;
+  repeated Spine spines = 9;
+  repeated Music musics = 10;
+  Drama drama = 11;
+  repeated Effect effects = 12;
+  SceneEffect sceneEffect = 13;
+  repeated USM USMs = 14;
+}
+
+message Image {
+  string uid = 1;
+  int32 layer = 2;
+  string path = 3;
+  bool isLast = 4;
+  Setting setting = 5;
+}
+
+message Spine {
+  string uid = 1;
+  int32 layer = 2;
+  string path = 3;
+  string animName = 4;
+  string animName2 = 5;
+  bool isAnalysis = 6;
+  bool isFlip = 7;
+  int32 freamIndex = 8;
+  bool isFreamDelay = 9;
+  float freamDelay = 10;
+  float freamX = 11;
+  float freamY = 12;
+  Setting setting = 13;
+}
+
+message Music {
+  string uid = 1;
+  string path = 2;
+  int32 type = 3;
+  bool isOpen = 4;
+  float delay = 5;
+  float fadeIn = 6;
+  float fadeOut = 7;
+  int32 volume = 8;
+}
+
+message Drama {
+  string boxPath = 1;
+  float boxDelay = 2;
+  int32 nameSize = 3;
+  string nameColor = 4;
+  string nameFreamColor = 5;
+  int32 contentSize = 6;
+  string contentColor = 7;
+  string contentFreamColor = 8;
+  string name = 9;
+  string content = 10;
+  float delay = 11;
+  float speed = 12;
+  int32 curve = 13;
+  bool isAnchor = 14;
+  int32 anchorType = 15;
+  int32 jumpLayer = 16;
+  string rolePath = 17;
+  repeated string options = 18;
+}
+
+message Effect {
+  string uid = 1;
+  string path = 2;
+  float x = 3;
+  float y = 4;
+  float z = 5;
+  float scale = 6;
+  float delay = 7;
+  bool isLoop = 8;
+  string audioPath = 9;
+  float audioDelay = 10;
+  int32 audioVolume = 11;
+}
+
+message SceneEffect {
+  string effectPath = 1;
+  int32 effectType = 2;
+  int32 cutInType = 3;
+  int32 cutInCurve = 4;
+  float cutInTime = 5;
+  int32 cutOutType = 6;
+  int32 cutOutCurve = 7;
+  float cutOutTime = 8;
+  bool isScreenShock = 9;
+  float shockDelay = 10;
+  float shockTime = 11;
+  float shockRate = 12;
+  float shockRange = 13;
+  bool isShockBImage = 14;
+  bool isShockTImage = 15;
+  bool isShockSpine = 16;
+  bool isShockUSM = 17;
+  float posX = 18;
+  float posY = 19;
+  float posZ = 20;
+  float scaleX = 21;
+  float scaleY = 22;
+  float scaleZ = 23;
+}
+
+message USM {
+  string uid = 1;
+  int32 layer = 2;
+  string path = 3;
+  float x = 4;
+  float y = 5;
+  float scale = 6;
+  float delay = 7;
+  bool isLoop = 8;
+  bool isLast = 9;
+  float alpha = 10;
+  bool isEndHide = 11;
+}
+
+message Setting {
+  float startPosX = 1;
+  float startPosY = 2;
+  float endPosX = 3;
+  float endPosY = 4;
+  float posDelay = 5;
+  float posAnimTime = 6;
+  int32 posCurveType = 7;
+  bool isPosLoop = 8;
+  int32 posLoopType = 9;
+  int32 posLoopCount = 10;
+  float startScale = 11;
+  float endScale = 12;
+  float scaleDelay = 13;
+  float scaleAnimTime = 14;
+  int32 scaleCurveType = 15;
+  bool isScaleLoop = 16;
+  int32 scaleLoopType = 17;
+  int32 scaleLoopCount = 18;
+  float startAlpha = 19;
+  float endAlpha = 20;
+  float alphaDelay = 21;
+  float alphaAnimTime = 22;
+  int32 alphaCurveType = 23;
+  bool isAlphaLoop = 24;
+  int32 alphaLoopType = 25;
+  int32 alphaLoopCount = 26;
+  bool isMaskOpen = 27;
+  bool isMaskVerticalVague = 28;
+  bool isMaskHorizontalVague = 29;
+  float bMaskStartScale = 30;
+  float bMaskEndScale = 31;
+  float bMaskScaleAnimTime = 32;
+  int32 bMaskScaleLoopCount = 33;
+  int32 bMaskScaleCurveType = 34;
+  int32 bMaskScaleLoopType = 35;
+  bool isBMaskScaleLoop = 36;
+  float bMaskStartAlpha = 37;
+  float bMaskEndAlpha = 38;
+  float bMaskAlphaAnimTime = 39;
+  int32 bMaskAlphaLoopCount = 40;
+  int32 bMaskAlphaCurveType = 41;
+  int32 bMaskAlphaLoopType = 42;
+  bool isBMaskAlphaLoop = 43;
+  float hMaskStartScale = 44;
+  float hMaskEndScale = 45;
+  float hMaskScaleAnimTime = 46;
+  int32 hMaskScaleLoopCount = 47;
+  int32 hMaskScaleCurveType = 48;
+  int32 hMaskScaleLoopType = 49;
+  bool isHMaskScaleLoop = 50;
+  float hMaskStartPosX = 51;
+  float hMaskEndPosX = 52;
+  float hMaskPosXAnimTime = 53;
+  int32 hMaskPosXLoopCount = 54;
+  int32 hMaskPosXCurveType = 55;
+  int32 hMaskPosXLoopType = 56;
+  bool isHMaskPosXLoop = 57;
+  bool isVVagueOpen = 58;
+  float vVagueStart = 59;
+  float vVagueEnd = 60;
+  float vVagueDelay = 61;
+  float vVagueAnimTime = 62;
+  int32 vVagueCurveType = 63;
+  int32 vVagueLoopType = 64;
+  bool isVVagueLoop = 65;
+  int32 vVagueLoopCount = 66;
+  bool isHVagueOpen = 67;
+  float hVagueStart = 68;
+  float hVagueEnd = 69;
+  float hVagueDelay = 70;
+  float hVagueAnimTime = 71;
+  int32 hVagueCurveType = 72;
+  int32 hVagueLoopType = 73;
+  bool isHVagueLoop = 74;
+  int32 hVagueLoopCount = 75;
+  bool isGVagueOpen = 76;
+  float gVagueStart = 77;
+  float gVagueEnd = 78;
+  float gVagueDelay = 79;
+  float gVagueAnimTime = 80;
+  int32 gVagueCurveType = 81;
+  int32 gVagueLoopType = 82;
+  bool isGVagueLoop = 83;
+  int32 gVagueLoopCount = 84;
+}
+

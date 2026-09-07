@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HAZE REVERB"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offline Companion Server"
+            android:textSize="14sp"
+            android:textColor="@color/text_gray" />
+    </LinearLayout>
+
+    <!-- Status Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_card"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <View
+                android:id="@+id/view_status_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/accent_red"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/text_server_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_stopped"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_red" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_ports_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ports_info"
+            android:textSize="12sp"
+            android:textColor="@color/text_gray" />
+    </LinearLayout>
+
+    <!-- Controls -->
+    <CheckBox
+        android:id="@+id/checkbox_dns_redirect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dns_redirect_desc"
+        android:textColor="@color/text_white"
+        android:textSize="13sp"
+        android:checked="true"
+        android:layout_marginBottom="14dp" />
+
+    <Button
+        android:id="@+id/btn_toggle_server"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/btn_start"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/text_white"
+        android:background="@color/primary"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btn_launch_game"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_launch_game"
+        android:textSize="14sp"
+        android:textColor="@color/text_white"
+        android:background="@color/secondary"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Logs Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/logs_header"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_gray" />
+
+        <Button
+            android:id="@+id/btn_clear_logs"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/btn_clear_logs"
+            android:textSize="11sp"
+            android:textColor="@color/text_white"
+            android:background="@color/secondary" />
+    </LinearLayout>
+
+    <!-- Logs Console -->
+    <ScrollView
+        android:id="@+id/scroll_logs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_log"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[Ready] Press START SERVER &amp; PLAY to begin.\n"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:textColor="@color/accent_green" />
+    </ScrollView>
+
+</LinearLayout>

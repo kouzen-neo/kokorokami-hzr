@@ -1,0 +1,24 @@
+# GitHub Linguist Language Overrides
+# Exclude decompiled client dumps, asset bundles, reverse-engineering helper scripts, and Android Java wrapper
+*.lua linguist-vendored
+extracted_lua/** linguist-vendored
+server_assets/** linguist-vendored
+downloaded_data/** linguist-vendored
+web_viewer/** linguist-vendored
+*.bundle linguist-vendored
+*.bytes linguist-vendored
+*.hash linguist-vendored
+*.version linguist-vendored
+extract_*.py linguist-vendored
+patch_*.py linguist-vendored
+test_*.py linguist-vendored
+
+# Vendor Java and Android framework glue so only Zig is counted in repository language stats
+*.java linguist-vendored
+*.xml linguist-vendored
+haze_companion_app/** linguist-vendored
+
+# Ensure Zig is identified as the repository language
+*.zig linguist-detectable=true
+server/** linguist-detectable=true
+tools/** linguist-detectable=true

@@ -1,0 +1,44 @@
+# Game Data & Huge Asset Dumps (13GB+)
+game_data/
+work_haze_reverb/
+original_apk_backup/
+downloaded_data/
+web_viewer/
+
+# Binaries & APK packages
+*.apk
+*.xapk
+*.idsig
+*.keystore
+server_haze
+server_haze_*
+/main
+test_c
+test_c.zig
+*.o
+*.a
+*.so
+
+# Zig cache & build artifacts
+zig-cache/
+.zig-cache/
+zig-out/
+
+# Python Virtualenv & Bytecode
+.venv*/
+venv/
+__pycache__/
+*.pyc
+
+# Dumps, logs & screenshots
+*.png
+*.jpg
+*.jpeg
+*.log
+*.bin
+test_ntf.bin
+
+# OS & Editor files
+.DS_Store
+.vscode/
+.idea/

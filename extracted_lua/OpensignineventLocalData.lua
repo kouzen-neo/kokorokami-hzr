@@ -1,0 +1,42 @@
+---@class OpensignineventLocalData
+OpensignineventLocalData = {
+id = 0,
+activityid = 0,
+group = 0,
+day = 0,
+reward = "0",
+}
+---@type OpensignineventLocalData[]
+OpensignineventLocalData.tab = {
+[1] = {id = 1, activityid = 99987, group = 1, day = 1, reward = "1_110030_10"},
+[2] = {id = 2, activityid = 99987, group = 1, day = 2, reward = "1_110031_10"},
+[3] = {id = 3, activityid = 99987, group = 1, day = 3, reward = "1_110031_10"},
+[4] = {id = 4, activityid = 99987, group = 1, day = 4, reward = "1_110030_10"},
+[5] = {id = 5, activityid = 99987, group = 1, day = 5, reward = "1_110031_10"},
+[6] = {id = 6, activityid = 99987, group = 1, day = 6, reward = "1_110031_10"},
+[7] = {id = 7, activityid = 99987, group = 1, day = 7, reward = "1_110034_5"},
+[8] = {id = 8, activityid = 99987, group = 1, day = 8, reward = "1_110030_10"},
+[9] = {id = 9, activityid = 99987, group = 1, day = 9, reward = "1_110031_10"},
+[10] = {id = 10, activityid = 99987, group = 1, day = 10, reward = "1_110031_10"},
+[11] = {id = 11, activityid = 99987, group = 1, day = 11, reward = "1_110030_10"},
+[12] = {id = 12, activityid = 99987, group = 1, day = 12, reward = "1_110031_10"},
+[13] = {id = 13, activityid = 99987, group = 1, day = 13, reward = "1_110031_10"},
+[14] = {id = 14, activityid = 99987, group = 1, day = 14, reward = "1_110034_5"},
+[15] = {id = 15, activityid = 99987, group = 1, day = 15, reward = "1_110030_10"},
+[16] = {id = 16, activityid = 99987, group = 1, day = 16, reward = "1_110031_10"},
+[17] = {id = 17, activityid = 99987, group = 1, day = 17, reward = "1_110031_10"},
+[18] = {id = 18, activityid = 99987, group = 1, day = 18, reward = "1_110030_10"},
+[19] = {id = 19, activityid = 99987, group = 1, day = 19, reward = "1_110031_10"},
+[20] = {id = 20, activityid = 99987, group = 1, day = 20, reward = "1_110031_10"},
+[21] = {id = 21, activityid = 99987, group = 1, day = 21, reward = "1_110034_5"},
+[22] = {id = 22, activityid = 99987, group = 1, day = 22, reward = "1_110030_10"},
+[23] = {id = 23, activityid = 99987, group = 1, day = 23, reward = "1_110031_10"},
+[24] = {id = 24, activityid = 99987, group = 1, day = 24, reward = "1_110031_10"},
+[25] = {id = 25, activityid = 99987, group = 1, day = 25, reward = "1_110030_10"},
+[26] = {id = 26, activityid = 99987, group = 1, day = 26, reward = "1_110031_10"},
+[27] = {id = 27, activityid = 99987, group = 1, day = 27, reward = "1_110031_10"},
+[28] = {id = 28, activityid = 99987, group = 1, day = 28, reward = "1_110034_5"},
+[29] = {id = 29, activityid = 99987, group = 1, day = 29, reward = "1_110030_20"},
+[30] = {id = 30, activityid = 99987, group = 1, day = 30, reward = "1_110031_20"},
+}
+return OpensignineventLocalData

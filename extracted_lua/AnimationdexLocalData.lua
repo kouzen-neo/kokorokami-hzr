@@ -1,0 +1,26 @@
+AnimationdexLocalData = {}
+AnimationdexLocalData.tab = {
+[1] = {1, 1, "anime_chalishakan", "chalishakan", 100031, "Charlissa\u{1000}brandishes\u{1000}her\u{1000}long\u{1000}spear.", 1, "Azure\u{1000}Front", "0", "0", "0", "查丽莎挥舞长枪"},
+[2] = {2, 1, "anime_chenshibaozha", "chenshibaozha", 100035, "Annihilation.", 2, "Azure\u{1000}Front", "0", "0", "0", "湮灭"},
+[3] = {3, 1, "anime_guantong", "guantong", 100032, "Detranscription\u{1000}Beam.", 3, "Azure\u{1000}Front", "0", "0", "0", "逆转录光束"},
+[4] = {4, 1, "anime_jiejingdaota", "jiejingdaota", 100036, "Black\u{1000}Hole.", 4, "Azure\u{1000}Front", "0", "0", "0", "黑洞"},
+[5] = {5, 1, "anime_jiguang", "jiguang", 100025, "Aurora.", 5, "Azure\u{1000}Front", "0", "0", "0", "极光"},
+[6] = {6, 1, "anime_linghangsiwang", "linghangsiwang", 100032, "Ushering\u{1000}in\u{1000}the\u{1000}end.", 6, "Azure\u{1000}Front", "0", "0", "0", "迎来终焉"},
+[7] = {7, 1, "anime_naiaixuli", "naiaixuli", 100031, "Nevaeh\u{1000}I.", 7, "Azure\u{1000}Front", "0", "0", "0", "逆爱其一"},
+[8] = {8, 1, "anime_naiaixuli2", "naiaixuli2", 100031, "Nevaeh\u{1000}II.", 8, "Azure\u{1000}Front", "0", "0", "0", "逆爱其二"},
+[9] = {9, 1, "anime_niaihuhuan", "niaihuhuan", 100031, "Memory\u{1000}Fragment.", 9, "Azure\u{1000}Front", "0", "0", "0", "记忆残片"},
+[10] = {10, 1, "anime_niaisiwang", "niaisiwang", 100033, "Lamentation.", 10, "Azure\u{1000}Front", "0", "0", "0", "哀亡"},
+[11] = {11, 1, "anime_seyudengchang", "seyudengchang", 100039, "Lust.", 11, "Azure\u{1000}Front", "0", "0", "0", "色欲"},
+[12] = {12, 1, "anime_siguang", "siguang", 100036, "Death\u{1000}Ray.", 12, "Azure\u{1000}Front", "0", "0", "0", "死光"},
+[13] = {13, 2, "anime_suobeikexiji", "suobeikexiji", 100133, "Wrestling.", 1, "Misty\u{1000}Port", "0", "0", "0", "角力"},
+[14] = {14, 2, "anime_yuanzuiruqin", "yuanzuiruqin", 100101, "SIN\u{1000}Incursion.", 2, "Misty\u{1000}Port", "0", "0", "0", "原罪入侵"},
+[15] = {15, 2, "anime_zhizhuchuansong", "zhizhuchuansong", 100112, "Spider.", 3, "Misty\u{1000}Port", "0", "0", "0", "“蜘蛛”"},
+[16] = {16, 1, "anime_zhuliwusikan", "zhuliwusikan", 100031, "Julius.", 13, "Azure\u{1000}Front", "0", "0", "0", "朱利乌斯"},
+[17] = {17, 1, "anime_WangZhuangSuiDao", "rjp-WangZhuangSuiDao", 100025, "Neural\u{1000}Network.", 14, "Azure\u{1000}Front", "0", "0", "0", "神经网"},
+[18] = {18, 3, "anime_tiaoshui", "tiaoshui", 100201, "Gigantification.", 1, "Mirage", "0", "0", "0", "巨大化"},
+[19] = {19, 3, "anime_duoluolisi", "langsong", 100208, "Weak\u{1000}Her.", 2, "Mirage", "0", "0", "0", "弱小的她"},
+[20] = {20, 3, "anime_haishetuxi", "haishetuxi", 100215, "Breath.", 3, "Mirage", "0", "0", "0", "吐息"},
+[21] = {21, 0, "anime_222", "222", 0, "Opening\u{1000}Animation.", 1, "Beyond\u{1000}the\u{1000}Time", "0", "0", "0", "开场动画"},
+[22] = {22, 4, "anime_duoluolisi1", "duoluolisi1", 100331, "Leave\u{1000}it\u{1000}to\u{1000}me.", 1, "The\u{1000}Place\u{1000}Where\u{1000}We\u{1000}Belong", "0", "0", "0", "交给我吧"},
+}
+return AnimationdexLocalData

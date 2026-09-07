@@ -1,0 +1,4402 @@
+// Generated from ProtoAll.bytes
+syntax = "proto3";
+package PBClient;
+
+enum MSGID {
+  HEARTBEAT = 1000;
+  CLIENT_VERIFY_REQ = 1001;
+  CLIENT_VERIFY_ACK = 1002;
+  CLIENT_VERIFY_NTF = 1003;
+  CLIENT_GOODS_REQ = 1004;
+  CLIENT_GOODS_ACK = 1005;
+  CLIENT_GOODS_NTF = 1006;
+  CLIENT_PVE_BATTLE_REQ = 1007;
+  CLIENT_PVE_BATTLE_ACK = 1008;
+  CLIENT_PVE_BATTLE_NTF = 1009;
+  CLIENT_LEVEL_INFO_REQ = 1010;
+  CLIENT_LEVEL_INFO_ACK = 1011;
+  CLIENT_LEVEL_INFO_NTF = 1012;
+  CLIENT_RECRUIT_REQ = 1013;
+  CLIENT_RECRUIT_ACK = 1014;
+  CLIENT_RECRUIT_NTF = 1015;
+  CLIENT_SIGN_IN_REQ = 1016;
+  CLIENT_SIGN_IN_ACK = 1017;
+  CLIENT_SIGN_IN_NTF = 1018;
+  CLIENT_TASK_PERFORM_REQ = 1019;
+  CLIENT_TASK_PERFORM_ACK = 1020;
+  CLIENT_TASK_PERFORM_NTF = 1021;
+  CLIENT_HERO_STAR_REQ = 1022;
+  CLIENT_HERO_STAR_ACK = 1023;
+  CLIENT_HERO_STAR_NTF = 1024;
+  CLIENT_HERO_LEVEL_UP_REQ = 1025;
+  CLIENT_HERO_LEVEL_UP_ACK = 1026;
+  CLIENT_HERO_LEVEL_UP_NTF = 1027;
+  CLIENT_HERO_DATA_REQ = 1028;
+  CLIENT_HERO_DATA_ACK = 1029;
+  CLIENT_HERO_DATA_NTF = 1030;
+  CLIENT_HERO_SKILL_UP_REQ = 1031;
+  CLIENT_HERO_SKILL_UP_ACK = 1032;
+  CLIENT_HERO_SKILL_UP_NTF = 1033;
+  CLIENT_ARMOR_MAKE_REQ = 1034;
+  CLIENT_ARMOR_MAKE_ACK = 1035;
+  CLIENT_ARMOR_MAKE_NTF = 1036;
+  CLIENT_ARMOR_UP_GRADE_REQ = 1037;
+  CLIENT_ARMOR_UP_GRADE_ACK = 1038;
+  CLIENT_ARMOR_UP_GRADE_NTF = 1039;
+  CLIENT_SET_LEVEL_STAR_REQ = 1040;
+  CLIENT_SET_LEVEL_STAR_ACK = 1041;
+  CLIENT_SET_LEVEL_STAR_NTF = 1042;
+  CLIENT_ARMOR_UP_EXP_REQ = 1043;
+  CLIENT_ARMOR_UP_EXP_ACK = 1044;
+  CLIENT_ARMOR_UP_EXP_NTF = 1045;
+  CLIENT_ARMOR_EXPLOIT_REQ = 1046;
+  CLIENT_ARMOR_EXPLOIT_ACK = 1047;
+  CLIENT_ARMOR_EXPLOIT_NTF = 1048;
+  CLIENT_DECOMPOSE_REQ = 1049;
+  CLIENT_DECOMPOSE_ACK = 1050;
+  CLIENT_DECOMPOSE_NTF = 1051;
+  CLIENT_EQUIP_DATA_REQ = 1052;
+  CLIENT_EQUIP_DATA_ACK = 1053;
+  CLIENT_EQUIP_DATA_NTF = 1054;
+  CLIENT_USE_GOODS_REQ = 1055;
+  CLIENT_USE_GOODS_ACK = 1056;
+  CLIENT_USE_GOODS_NTF = 1057;
+  CLIENT_USE_GOODS_CHOOSE_REQ = 1058;
+  CLIENT_USE_GOODS_CHOOSE_ACK = 1059;
+  CLIENT_USE_GOODS_CHOOSE_NTF = 1060;
+  CLIENT_HERO_AWAKEN_REQ = 1061;
+  CLIENT_HERO_AWAKEN_ACK = 1062;
+  CLIENT_HERO_AWAKEN_NTF = 1063;
+  CLIENT_EQUIP_UP_REQ = 1064;
+  CLIENT_EQUIP_UP_ACK = 1065;
+  CLIENT_EQUIP_UP_NTF = 1066;
+  CLIENT_EQUIP_SUPPLY_REQ = 1067;
+  CLIENT_EQUIP_SUPPLY_ACK = 1068;
+  CLIENT_EQUIP_SUPPLY_NTF = 1069;
+  CLIENT_EMAIL_DATA_REQ = 1070;
+  CLIENT_EMAIL_DATA_ACK = 1071;
+  CLIENT_EMAIL_DATA_NTF = 1072;
+  CLIENT_EMAIL_GOODS_REQ = 1073;
+  CLIENT_EMAIL_GOODS_ACK = 1074;
+  CLIENT_EMAIL_GOODS_NTF = 1075;
+  CLIENT_EMAIL_DELETE_REQ = 1076;
+  CLIENT_EMAIL_DELETE_ACK = 1077;
+  CLIENT_EMAIL_DELETE_NTF = 1078;
+  CLIENT_EMAIL_GOODS_ALL_REQ = 1079;
+  CLIENT_EMAIL_GOODS_ALL_ACK = 1080;
+  CLIENT_EMAIL_GOODS_ALL_NTF = 1081;
+  CLIENT_EMAIL_DELETE_ALL_REQ = 1082;
+  CLIENT_EMAIL_DELETE_ALL_ACK = 1083;
+  CLIENT_EMAIL_DELETE_ALL_NTF = 1084;
+  CLIENT_HERO_CHANGE_ARMOR_REQ = 1085;
+  CLIENT_HERO_CHANGE_ARMOR_ACK = 1086;
+  CLIENT_HERO_CHANGE_ARMOR_NTF = 1087;
+  CLIENT_BUY_GOODS_REQ = 1088;
+  CLIENT_BUY_GOODS_ACK = 1089;
+  CLIENT_BUY_GOODS_NTF = 1090;
+  CLIENT_EXPAND_REQ = 1091;
+  CLIENT_EXPAND_ACK = 1092;
+  CLIENT_EXPAND_NTF = 1093;
+  CLIENT_CHOOSE_MENU_ROLE_REQ = 1094;
+  CLIENT_CHOOSE_MENU_ROLE_ACK = 1095;
+  CLIENT_CHOOSE_MENU_ROLE_NTF = 1096;
+  CLIENT_CHOOSE_NIKE_REQ = 1097;
+  CLIENT_CHOOSE_NIKE_ACK = 1098;
+  CLIENT_CHOOSE_NIKE_NTF = 1099;
+  CLIENT_SET_TITLE_REQ = 1100;
+  CLIENT_SET_TITLE_ACK = 1101;
+  CLIENT_SET_TITLE_NTF = 1102;
+  CLIENT_EMAIL_LOOK_REQ = 1103;
+  CLIENT_EMAIL_LOOK_ACK = 1104;
+  CLIENT_EMAIL_LOOK_NTF = 1105;
+  CLIENT_TASK_GET_REQ = 1106;
+  CLIENT_TASK_GET_ACK = 1107;
+  CLIENT_TASK_GET_NTF = 1108;
+  CLIENT_SAVE_PROGRESS_REQ = 1109;
+  CLIENT_SAVE_PROGRESS_ACK = 1110;
+  CLIENT_SAVE_PROGRESS_NTF = 1111;
+  CLIENT_GET_MANUAL_REQ = 1112;
+  CLIENT_GET_MANUAL_ACK = 1113;
+  CLIENT_GET_MANUAL_NTF = 1114;
+  CLIENT_WRITE_MANUAL_REQ = 1115;
+  CLIENT_WRITE_MANUAL_ACK = 1116;
+  CLIENT_WRITE_MANUAL_NTF = 1117;
+  CLIENT_GET_SCORE_REWARD_REQ = 1118;
+  CLIENT_GET_SCORE_REWARD_ACK = 1119;
+  CLIENT_GET_SCORE_REWARD_NTF = 1120;
+  CLIENT_JOIN_CHAT_REQ = 1121;
+  CLIENT_JOIN_CHAT_ACK = 1122;
+  CLIENT_JOIN_CHAT_NTF = 1123;
+  CLIENT_CHAT_REQ = 1124;
+  CLIENT_CHAT_ACK = 1125;
+  CLIENT_CHAT_NTF = 1126;
+  CLIENT_TEAM_DATA_REQ = 1127;
+  CLIENT_TEAM_DATA_ACK = 1128;
+  CLIENT_TEAM_DATA_NTF = 1129;
+  CLIENT_TEAM_SAVE_REQ = 1130;
+  CLIENT_TEAM_SAVE_ACK = 1131;
+  CLIENT_TEAM_SAVE_NTF = 1132;
+  CLIENT_CHAT_ADDR_REQ = 1133;
+  CLIENT_CHAT_ADDR_ACK = 1134;
+  CLIENT_CHAT_ADDR_NTF = 1135;
+  CLIENT_GET_SCROLL_BOX_REQ = 1136;
+  CLIENT_GET_SCROLL_BOX_ACK = 1137;
+  CLIENT_GET_SCROLL_BOX_NTF = 1138;
+  CLIENT_BOSS_BATTLE_REQ = 1139;
+  CLIENT_BOSS_BATTLE_ACK = 1140;
+  CLIENT_BOSS_BATTLE_NTF = 1141;
+  CLIENT_BOSS_DATA_REQ = 1142;
+  CLIENT_BOSS_DATA_ACK = 1143;
+  CLIENT_BOSS_DATA_NTF = 1144;
+  CLIENT_BOSS_RANK_REQ = 1145;
+  CLIENT_BOSS_RANK_ACK = 1146;
+  CLIENT_BOSS_RANK_NTF = 1147;
+  CLIENT_BOSS_BATTLE_TEXT_REQ = 1148;
+  CLIENT_BOSS_BATTLE_TEXT_ACK = 1149;
+  CLIENT_BOSS_BATTLE_TEXT_NTF = 1150;
+  CLIENT_USE_BOSS_S_BATTLE_REQ = 1151;
+  CLIENT_USE_BOSS_S_BATTLE_ACK = 1152;
+  CLIENT_USE_BOSS_S_BATTLE_NTF = 1153;
+  CLIENT_HIGH_LADDER_DATA_REQ = 1154;
+  CLIENT_HIGH_LADDER_DATA_ACK = 1155;
+  CLIENT_HIGH_LADDER_DATA_NTF = 1156;
+  CLIENT_HIGH_LADDER_BATTLE_REQ = 1157;
+  CLIENT_HIGH_LADDER_BATTLE_ACK = 1158;
+  CLIENT_HIGH_LADDER_BATTLE_NTF = 1159;
+  CLIENT_HIGH_LADDER_BATTLE_RESULT_REQ = 1160;
+  CLIENT_HIGH_LADDER_BATTLE_RESULT_ACK = 1161;
+  CLIENT_HIGH_LADDER_BATTLE_RESULT_NTF = 1162;
+  CLIENT_HIGH_LADDER_PLAY_BACK_REQ = 1163;
+  CLIENT_HIGH_LADDER_PLAY_BACK_ACK = 1164;
+  CLIENT_HIGH_LADDER_PLAY_BACK_NTF = 1165;
+  CLIENT_SET_HEAD_REQ = 1166;
+  CLIENT_SET_HEAD_ACK = 1167;
+  CLIENT_SET_HEAD_NTF = 1168;
+  CLIENT_SET_HEAD_FRAME_REQ = 1169;
+  CLIENT_SET_HEAD_FRAME_ACK = 1170;
+  CLIENT_SET_HEAD_FRAME_NTF = 1171;
+  CLIENT_SET_SIGNATURE_REQ = 1172;
+  CLIENT_SET_SIGNATURE_ACK = 1173;
+  CLIENT_SET_SIGNATURE_NTF = 1174;
+  CLIENT_GET_HIGH_LADDER_BASE_REQ = 1175;
+  CLIENT_GET_HIGH_LADDER_BASE_ACK = 1176;
+  CLIENT_GET_HIGH_LADDER_BASE_NTF = 1177;
+  CLIENT_GET_HIGH_LADDER_RANK_REQ = 1178;
+  CLIENT_GET_HIGH_LADDER_RANK_ACK = 1179;
+  CLIENT_GET_HIGH_LADDER_RANK_NTF = 1180;
+  CLIENT_GET_RED_TOWER_REWARD_REQ = 1181;
+  CLIENT_GET_RED_TOWER_REWARD_ACK = 1182;
+  CLIENT_GET_RED_TOWER_REWARD_NTF = 1183;
+  CLIENT_GET_GUIDE_REWARD_REQ = 1184;
+  CLIENT_GET_GUIDE_REWARD_ACK = 1185;
+  CLIENT_GET_GUIDE_REWARD_NTF = 1186;
+  CLIENT_BUY_VIGOR_REQ = 1187;
+  CLIENT_BUY_VIGOR_ACK = 1188;
+  CLIENT_BUY_VIGOR_NTF = 1189;
+  CLIENT_BUY_BLADDER_REQ = 1190;
+  CLIENT_BUY_BLADDER_ACK = 1191;
+  CLIENT_BUY_BLADDER_NTF = 1192;
+  CLIENT_BUY_SLADDER_REQ = 1193;
+  CLIENT_BUY_SLADDER_ACK = 1194;
+  CLIENT_BUY_SLADDER_NTF = 1195;
+  CLIENT_GET_BUY_NUMBER_REQ = 1196;
+  CLIENT_GET_BUY_NUMBER_ACK = 1197;
+  CLIENT_GET_BUY_NUMBER_NTF = 1198;
+  CLIENT_GET_HOME_DATA_REQ = 1199;
+  CLIENT_GET_HOME_DATA_ACK = 1200;
+  CLIENT_GET_HOME_DATA_NTF = 1201;
+  CLIENT_BUILD_HOME_REQ = 1202;
+  CLIENT_BUILD_HOME_ACK = 1203;
+  CLIENT_BUILD_HOME_NTF = 1204;
+  CLIENT_HOME_REAP_REQ = 1205;
+  CLIENT_HOME_REAP_ACK = 1206;
+  CLIENT_HOME_REAP_NTF = 1207;
+  CLIENT_START_HOME_EXPEDITION_REQ = 1208;
+  CLIENT_START_HOME_EXPEDITION_ACK = 1209;
+  CLIENT_START_HOME_EXPEDITION_NTF = 1210;
+  CLIENT_HOME_MAKE_REQ = 1211;
+  CLIENT_HOME_MAKE_ACK = 1212;
+  CLIENT_HOME_MAKE_NTF = 1213;
+  CLIENT_NEW_RECRUIT_REQ = 1214;
+  CLIENT_NEW_RECRUIT_ACK = 1215;
+  CLIENT_NEW_RECRUIT_NTF = 1216;
+  CLIENT_NEW_RECRUIT_GET_REQ = 1217;
+  CLIENT_NEW_RECRUIT_GET_ACK = 1218;
+  CLIENT_NEW_RECRUIT_GET_NTF = 1219;
+  CLIENT_SWEEP_LEVEL_STAR_REQ = 1220;
+  CLIENT_SWEEP_LEVEL_STAR_ACK = 1221;
+  CLIENT_SWEEP_LEVEL_STAR_NTF = 1222;
+  CLIENT_GET_GAME_INFO_REQ = 1223;
+  CLIENT_GET_GAME_INFO_ACK = 1224;
+  CLIENT_GET_GAME_INFO_NTF = 1225;
+  CLIENT_REPORT_GAME_INFO_REQ = 1226;
+  CLIENT_REPORT_GAME_INFO_ACK = 1227;
+  CLIENT_REPORT_GAME_INFO_NTF = 1228;
+  CLIENT_ANSWER_GAME_INFO_REQ = 1229;
+  CLIENT_ANSWER_GAME_INFO_ACK = 1230;
+  CLIENT_ANSWER_GAME_INFO_NTF = 1231;
+  CLIENT_END_HOME_EXPEDITION_REQ = 1232;
+  CLIENT_END_HOME_EXPEDITION_ACK = 1233;
+  CLIENT_END_HOME_EXPEDITION_NTF = 1234;
+  CLIENT_GET_HOME_EXPEDITION_REQ = 1235;
+  CLIENT_GET_HOME_EXPEDITION_ACK = 1236;
+  CLIENT_GET_HOME_EXPEDITION_NTF = 1237;
+  CLIENT_GET_FRIEND_INFO_REQ = 1238;
+  CLIENT_GET_FRIEND_INFO_ACK = 1239;
+  CLIENT_GET_FRIEND_INFO_NTF = 1240;
+  CLIENT_FRIEND_APPLY_REQ = 1241;
+  CLIENT_FRIEND_APPLY_ACK = 1242;
+  CLIENT_FRIEND_APPLY_NTF = 1243;
+  CLIENT_FRIEND_APPROVAL_REQ = 1244;
+  CLIENT_FRIEND_APPROVAL_ACK = 1245;
+  CLIENT_FRIEND_APPROVAL_NTF = 1246;
+  CLIENT_FRIEND_SUPPORT_GET_REQ = 1247;
+  CLIENT_FRIEND_SUPPORT_GET_ACK = 1248;
+  CLIENT_FRIEND_SUPPORT_GET_NTF = 1249;
+  CLIENT_FRIEND_SUPPORT_CHANGE_REQ = 1250;
+  CLIENT_FRIEND_SUPPORT_CHANGE_ACK = 1251;
+  CLIENT_FRIEND_SUPPORT_CHANGE_NTF = 1252;
+  CLIENT_FRIEND_SUPPORT_REAP_REQ = 1253;
+  CLIENT_FRIEND_SUPPORT_REAP_ACK = 1254;
+  CLIENT_FRIEND_SUPPORT_REAP_NTF = 1255;
+  CLIENT_FRIEND_SEARCH_REQ = 1256;
+  CLIENT_FRIEND_SEARCH_ACK = 1257;
+  CLIENT_FRIEND_SEARCH_NTF = 1258;
+  CLIENT_FRIEND_INFO_REQ = 1259;
+  CLIENT_FRIEND_INFO_ACK = 1260;
+  CLIENT_FRIEND_INFO_NTF = 1261;
+  CLIENT_FRIEND_SET_REMARK_REQ = 1262;
+  CLIENT_FRIEND_SET_REMARK_ACK = 1263;
+  CLIENT_FRIEND_SET_REMARK_NTF = 1264;
+  CLIENT_FRIEND_LIKE_REQ = 1265;
+  CLIENT_FRIEND_LIKE_ACK = 1266;
+  CLIENT_FRIEND_LIKE_NTF = 1267;
+  CLIENT_FRIEND_DEL_REQ = 1268;
+  CLIENT_FRIEND_DEL_ACK = 1269;
+  CLIENT_FRIEND_DEL_NTF = 1270;
+  CLIENT_TEXT_BATTLE_REQ = 1271;
+  CLIENT_TEXT_BATTLE_ACK = 1272;
+  CLIENT_TEXT_BATTLE_NTF = 1273;
+  CLIENT_TEXT_BATTLE_ATTR_REQ = 1274;
+  CLIENT_TEXT_BATTLE_ATTR_ACK = 1275;
+  CLIENT_TEXT_BATTLE_ATTR_NTF = 1276;
+  CLIENT_BATTLE_SUPPORT_REQ = 1277;
+  CLIENT_BATTLE_SUPPORT_ACK = 1278;
+  CLIENT_BATTLE_SUPPORT_NTF = 1279;
+  CLIENT_CHOOSE_BATTLE_REWARD_REQ = 1280;
+  CLIENT_CHOOSE_BATTLE_REWARD_ACK = 1281;
+  CLIENT_CHOOSE_BATTLE_REWARD_NTF = 1282;
+  CLIENT_SET_LEVEL_STAR_EX_REQ = 1283;
+  CLIENT_SET_LEVEL_STAR_EX_ACK = 1284;
+  CLIENT_SET_LEVEL_STAR_EX_NTF = 1285;
+  CLIENT_HIGH_LADDER_BATTLE_EX_REQ = 1286;
+  CLIENT_HIGH_LADDER_BATTLE_EX_ACK = 1287;
+  CLIENT_HIGH_LADDER_BATTLE_EX_NTF = 1288;
+  CLIENT_CHOOSE_LADDER_BATTLE_REWARD_REQ = 1289;
+  CLIENT_CHOOSE_LADDER_BATTLE_REWARD_ACK = 1290;
+  CLIENT_CHOOSE_LADDER_BATTLE_REWARD_NTF = 1291;
+  CLIENT_ACTIVITY_GET_REQ = 1292;
+  CLIENT_ACTIVITY_GET_ACK = 1293;
+  CLIENT_ACTIVITY_GET_NTF = 1294;
+  CLIENT_ACTIVITY_GET_REWARD_REQ = 1295;
+  CLIENT_ACTIVITY_GET_REWARD_ACK = 1296;
+  CLIENT_ACTIVITY_GET_REWARD_NTF = 1297;
+  CLIENT_TOWER_REWARD_REQ = 1298;
+  CLIENT_TOWER_REWARD_ACK = 1299;
+  CLIENT_TOWER_REWARD_NTF = 1300;
+  CLIENT_TOWER_BATTLE_REQ = 1301;
+  CLIENT_TOWER_BATTLE_ACK = 1302;
+  CLIENT_TOWER_BATTLE_NTF = 1303;
+  CLIENT_GUIDE_REWARD_REQ = 1304;
+  CLIENT_GUIDE_REWARD_ACK = 1305;
+  CLIENT_GUIDE_REWARD_NTF = 1306;
+  CLIENT_GUIDE_BATTLE_REQ = 1307;
+  CLIENT_GUIDE_BATTLE_ACK = 1308;
+  CLIENT_GUIDE_BATTLE_NTF = 1309;
+  CLIENT_GET_RAND_SHOP_ITEM_REQ = 1310;
+  CLIENT_GET_RAND_SHOP_ITEM_ACK = 1311;
+  CLIENT_GET_RAND_SHOP_ITEM_NTF = 1312;
+  CLIENT_BUY_RAND_SHOP_ITEM_REQ = 1313;
+  CLIENT_BUY_RAND_SHOP_ITEM_ACK = 1314;
+  CLIENT_BUY_RAND_SHOP_ITEM_NTF = 1315;
+  CLIENT_BUY_PASSES_LEVEL_REQ = 1316;
+  CLIENT_BUY_PASSES_LEVEL_ACK = 1317;
+  CLIENT_BUY_PASSES_LEVEL_NTF = 1318;
+  CLIENT_SET_EVENT_BOSS_LEVEL_STAR_REQ = 1319;
+  CLIENT_SET_EVENT_BOSS_LEVEL_STAR_ACK = 1320;
+  CLIENT_SET_EVENT_BOSS_LEVEL_STAR_NTF = 1321;
+  CLIENT_HOMEBASE_BUILD_REQ = 1322;
+  CLIENT_HOMEBASE_BUILD_ACK = 1323;
+  CLIENT_HOMEBASE_BUILD_NTF = 1324;
+  CLIENT_HIGH_LADDER_PLAY_BACK_EX_REQ = 1325;
+  CLIENT_HIGH_LADDER_PLAY_BACK_EX_ACK = 1326;
+  CLIENT_HIGH_LADDER_PLAY_BACK_EX_NTF = 1327;
+  CLIENT_CHOOSE_HOME_ROLE_REQ = 1328;
+  CLIENT_CHOOSE_HOME_ROLE_ACK = 1329;
+  CLIENT_CHOOSE_HOME_ROLE_NTF = 1330;
+  CLIENT_RECONNECT_REQ = 1331;
+  CLIENT_RECONNECT_ACK = 1332;
+  CLIENT_SHARE_REQ = 1333;
+  CLIENT_SHARE_ACK = 1334;
+  CLIENT_SHARE_NTF = 1335;
+  CLIENT_ACTIVITY_MOVE_REQ = 1336;
+  CLIENT_ACTIVITY_MOVE_ACK = 1337;
+  CLIENT_ACTIVITY_MOVE_NTF = 1338;
+  CLIENT_CDKEY_REQ = 1339;
+  CLIENT_CDKEY_ACK = 1340;
+  CLIENT_CDKEY_NTF = 1341;
+  CLIENT_BOSS_BATTLE_E_REQ = 1342;
+  CLIENT_BOSS_BATTLE_E_ACK = 1343;
+  CLIENT_BOSS_BATTLE_E_NTF = 1344;
+  CLIENT_BOSS_DATA_E_REQ = 1345;
+  CLIENT_BOSS_DATA_E_ACK = 1346;
+  CLIENT_BOSS_DATA_E_NTF = 1347;
+  CLIENT_BOSS_RANK_E_REQ = 1348;
+  CLIENT_BOSS_RANK_E_ACK = 1349;
+  CLIENT_BOSS_RANK_E_NTF = 1350;
+  CLIENT_BOSS_BATTLE_TEXT_E_REQ = 1351;
+  CLIENT_BOSS_BATTLE_TEXT_E_ACK = 1352;
+  CLIENT_BOSS_BATTLE_TEXT_E_NTF = 1353;
+  CLIENT_HERO_FAVOR_UP_REQ = 1354;
+  CLIENT_HERO_FAVOR_UP_ACK = 1355;
+  CLIENT_HERO_FAVOR_UP_NTF = 1356;
+  CLIENT_SKILLMATERIALS_MAKE_REQ = 1357;
+  CLIENT_SKILLMATERIALS_MAKE_ACK = 1358;
+  CLIENT_SKILLMATERIALS_MAKE_NTF = 1359;
+  CLIENT_PVP_BACKGROUND_SET_REQ = 1360;
+  CLIENT_PVP_BACKGROUND_SET_ACK = 1361;
+  CLIENT_PVP_BACKGROUND_SET_NTF = 1362;
+  CLIENT_GET_CLUB_INFO_REQ = 1363;
+  CLIENT_GET_CLUB_INFO_ACK = 1364;
+  CLIENT_GET_CLUB_INFO_NTF = 1365;
+  CLIENT_CREATE_CLUB_INFO_REQ = 1366;
+  CLIENT_CREATE_CLUB_INFO_ACK = 1367;
+  CLIENT_CREATE_CLUB_INFO_NTF = 1368;
+  CLIENT_JOIN_CLUB_REQ = 1369;
+  CLIENT_JOIN_CLUB_ACK = 1370;
+  CLIENT_JOIN_CLUB_NTF = 1371;
+  CLIENT_CLUB_DONATE_REQ = 1372;
+  CLIENT_CLUB_DONATE_ACK = 1373;
+  CLIENT_CLUB_DONATE_NTF = 1374;
+  CLIENT_CLUB_SKILL_REQ = 1375;
+  CLIENT_CLUB_SKILL_ACK = 1376;
+  CLIENT_CLUB_SKILL_NTF = 1377;
+  CLIENT_AUDIT_CLUB_REQ = 1378;
+  CLIENT_AUDIT_CLUB_ACK = 1379;
+  CLIENT_AUDIT_CLUB_NTF = 1380;
+  CLIENT_CLUB_CHAT_REQ = 1381;
+  CLIENT_CLUB_CHAT_ACK = 1382;
+  CLIENT_CLUB_CHAT_NTF = 1383;
+  CLIENT_MODIFY_CLUB_REQ = 1384;
+  CLIENT_MODIFY_CLUB_ACK = 1385;
+  CLIENT_MODIFY_CLUB_NTF = 1386;
+  CLIENT_CHANGE_BIRTHDAY_REQ = 1387;
+  CLIENT_CHANGE_BIRTHDAY_ACK = 1388;
+  CLIENT_CHANGE_BIRTHDAY_NTF = 1389;
+  CLIENT_CHANGE_SKIN_REQ = 1390;
+  CLIENT_CHANGE_SKIN_ACK = 1391;
+  CLIENT_CHANGE_SKIN_NTF = 1392;
+  CLIENT_GET_LOTTERY_LOG_REQ = 1393;
+  CLIENT_GET_LOTTERY_LOG_ACK = 1394;
+  CLIENT_GET_LOTTERY_LOG_NTF = 1395;
+  CLIENT_CHANGE_LOCK_REQ = 1396;
+  CLIENT_CHANGE_LOCK_ACK = 1397;
+  CLIENT_CHANGE_LOCK_NTF = 1398;
+  CLIENT_CANCEL_HOME_EXPEDITION_REQ = 1399;
+  CLIENT_CANCEL_HOME_EXPEDITION_ACK = 1400;
+  CLIENT_CANCEL_HOME_EXPEDITION_NTF = 1401;
+  CLIENT_GET_MONTHLY_TOWER_REQ = 1402;
+  CLIENT_GET_MONTHLY_TOWER_ACK = 1403;
+  CLIENT_GET_MONTHLY_TOWER_NTF = 1404;
+  CLIENT_MONTHLY_TOWER_FIGHT_REQ = 1405;
+  CLIENT_MONTHLY_TOWER_FIGHT_ACK = 1406;
+  CLIENT_MONTHLY_TOWER_FIGHT_NTF = 1407;
+  CLIENT_TOWER_HERO_RESET_REQ = 1408;
+  CLIENT_TOWER_HERO_RESET_ACK = 1409;
+  CLIENT_TOWER_HERO_RESET_NTF = 1410;
+  CLIENT_GET_SERVER_TIME_REQ = 1411;
+  CLIENT_GET_SERVER_TIME_ACK = 1412;
+  CLIENT_GET_SERVER_TIME_NTF = 1413;
+  CLIENT_DROP_INFO_REQ = 1414;
+  CLIENT_DROP_INFO_ACK = 1415;
+  CLIENT_DROP_INFO_NTF = 1416;
+  CLIENT_SET_HERO_SKILL_REQ = 1417;
+  CLIENT_SET_HERO_SKILL_ACK = 1418;
+  CLIENT_SET_HERO_SKILL_NTF = 1419;
+  CLIENT_EVENT_EXPANSION_UP_REQ = 1420;
+  CLIENT_EVENT_EXPANSION_UP_ACK = 1421;
+  CLIENT_EVENT_EXPANSION_UP_NTF = 1422;
+  CLIENT_EVENT_TWISTER_GAME_UP_REQ = 1423;
+  CLIENT_EVENT_TWISTER_GAME_UP_ACK = 1424;
+  CLIENT_EVENT_TWISTER_GAME_UP_NTF = 1425;
+  CLIENT_EVENT_TWISTER_GAME_RESET_REQ = 1426;
+  CLIENT_EVENT_TWISTER_GAME_RESET_ACK = 1427;
+  CLIENT_EVENT_TWISTER_GAME_RESET_NTF = 1428;
+  CLIENT_EVENT_TWISTER_GAME_LOTTERY_REQ = 1429;
+  CLIENT_EVENT_TWISTER_GAME_LOTTERY_ACK = 1430;
+  CLIENT_EVENT_TWISTER_GAME_LOTTERY_NTF = 1431;
+  CLIENT_LEVEL_DROP_INFO_REQ = 1432;
+  CLIENT_LEVEL_DROP_INFO_ACK = 1433;
+  CLIENT_LEVEL_DROP_INFO_NTF = 1434;
+  CLIENT_GET_MONTH_TOWER_RANK_REQ = 1435;
+  CLIENT_GET_MONTH_TOWER_RANK_ACK = 1436;
+  CLIENT_GET_MONTH_TOWER_RANK_NTF = 1437;
+  CLIENT_GET_N_GAME_INFO_REQ = 1438;
+  CLIENT_GET_N_GAME_INFO_ACK = 1439;
+  CLIENT_GET_N_GAME_INFO_NTF = 1440;
+  CLIENT_N_GAME_PHASE_UP_REQ = 1441;
+  CLIENT_N_GAME_PHASE_UP_ACK = 1442;
+  CLIENT_N_GAME_PHASE_UP_NTF = 1443;
+  CLIENT_N_GAME_FINISH_REQ = 1444;
+  CLIENT_N_GAME_FINISH_ACK = 1445;
+  CLIENT_N_GAME_FINISH_NTF = 1446;
+  CLIENT_GET_N_GAME_REWARD_REQ = 1447;
+  CLIENT_GET_N_GAME_REWARD_ACK = 1448;
+  CLIENT_GET_N_GAME_REWARD_NTF = 1449;
+  CLIENT_BOSS_BATTLE_M_REQ = 1450;
+  CLIENT_BOSS_BATTLE_M_ACK = 1451;
+  CLIENT_BOSS_BATTLE_M_NTF = 1452;
+  CLIENT_BOSS_BATTLE_M_SETTLE_NTF = 1453;
+  CLIENT_BOSS_DATA_M_REQ = 1454;
+  CLIENT_BOSS_DATA_M_ACK = 1455;
+  CLIENT_BOSS_DATA_M_NTF = 1456;
+  CLIENT_BOSS_RANK_M_REQ = 1457;
+  CLIENT_BOSS_RANK_M_ACK = 1458;
+  CLIENT_BOSS_RANK_M_NTF = 1459;
+  CLIENT_BOSS_BATTLE_TEXT_M_REQ = 1460;
+  CLIENT_BOSS_BATTLE_TEXT_M_ACK = 1461;
+  CLIENT_BOSS_BATTLE_TEXT_M_NTF = 1462;
+  CLIENT_JOIN_CLUB_CHAT_REQ = 1983;
+  CLIENT_JOIN_CLUB_CHAT_ACK = 1984;
+  CLIENT_RECRUIT_REPEAT_REQ = 1985;
+  CLIENT_RECRUIT_REPEAT_ACK = 1986;
+  CLIENT_SPECIAL_EQUIP_MAKE_REQ = 10000;
+  CLIENT_SPECIAL_EQUIP_MAKE_ACK = 10001;
+  CLIENT_SPECIAL_EQUIP_MAKE_NTF = 10002;
+  CLIENT_SPECIAL_EQUIP_UP_LEVEL_REQ = 10003;
+  CLIENT_SPECIAL_EQUIP_UP_LEVEL_ACK = 10004;
+  CLIENT_SPECIAL_EQUIP_UP_LEVEL_NTF = 10005;
+  CLIENT_SPECIAL_EQUIP_UP_GRADE_REQ = 10006;
+  CLIENT_SPECIAL_EQUIP_UP_GRADE_ACK = 10007;
+  CLIENT_SPECIAL_EQUIP_UP_GRADE_NTF = 10008;
+  CLIENT_SUMMER_AWARD_REQ = 10009;
+  CLIENT_SUMMER_AWARD_ACK = 10010;
+  CLIENT_SUMMER_AWARD_NTF = 10011;
+  CLIENT_UPDATE_PAY_PACK_REQ = 10012;
+  CLIENT_UPDATE_PAY_PACK_ACK = 10013;
+  CLIENT_RECHARGE_INFO_REQ = 10014;
+  CLIENT_RECHARGE_INFO_ACK = 10015;
+  CLIENT_RECHARGE_INFO_NTF = 10016;
+  CLIENT_REGRESSION_ONCE_AWARD_REQ = 10017;
+  CLIENT_REGRESSION_ONCE_AWARD_ACK = 10018;
+  CLIENT_REGRESSION_ONCE_AWARD_NTF = 10019;
+  CLIENT_REGRESSION_SIGN_AWARD_REQ = 10020;
+  CLIENT_REGRESSION_SIGN_AWARD_ACK = 10021;
+  CLIENT_REGRESSION_SIGN_AWARD_NTF = 10022;
+  CLIENT_LIGHT_DARK_RECRUIT_REQ = 10023;
+  CLIENT_LIGHT_DARK_RECRUIT_ACK = 10024;
+  CLIENT_LIGHT_DARK_RECRUIT_NTF = 10025;
+  CLIENT_OTHER_PRICE_LOGIN_NTF = 1987;
+  CLIENT_MARQUEE_NTF = 1988;
+  CLIENT_HAS_NEW_FRIENDSUPPORT_INFO_NTF = 1989;
+  CLIENT_HAS_NEW_ORDER_INFO_NTF = 1990;
+  CLIENT_HAS_NEW_FRIEND_INFO_NTF = 1991;
+  CLIENT_SERVICE_CLOSE_NTF = 1992;
+  CLIENT_STATISTICS_CHOOSE_NTF = 1993;
+  CLIENT_NEW_EMAIL_NTF = 1994;
+  CLIENT_DEED_STATISTICS_REQ = 1995;
+  CLIENT_VERSION_INFO = 1996;
+  CLIENT_LINE_INFO = 1997;
+  CLIENT_REGISTER_RESULT = 1998;
+  CLIENT_LOGIN_RESULT = 1999;
+  CLIENT_TASK_REWARD_ONE_KEY_REQ = 2001;
+  CLIENT_TASK_REWARD_ONE_KEY_ACK = 2002;
+  CLIENT_PAY_PACK_INFO_NTF = 2005;
+  CLIENT_SHOP_LIST_REQ = 2007;
+  CLIENT_SHOP_LIST_ACK = 2008;
+  CLIENT_SHOP_LIST_NTF = 2009;
+  CLIENT_INNER_TOWER_RESET_REQ = 2010;
+  CLIENT_INNER_TOWER_RESET_ACK = 2011;
+  CLIENT_INNER_TOWER_RESET_NTF = 2012;
+  CLIENT_INNER_TOWER_HERO_RESET_REQ = 2013;
+  CLIENT_INNER_TOWER_HERO_RESET_ACK = 2014;
+  CLIENT_INNER_TOWER_HERO_RESET_NTF = 2015;
+  CLIENT_INNER_TOWER_BUFF_SELECT_REQ = 2016;
+  CLIENT_INNER_TOWER_BUFF_SELECT_ACK = 2017;
+  CLIENT_INNER_TOWER_BUFF_SELECT_NTF = 2018;
+  CLIENT_INNER_TOWER_GET_PT_REWARD_REQ = 2019;
+  CLIENT_INNER_TOWER_GET_PT_REWARD_ACK = 2020;
+  CLIENT_INNER_TOWER_GET_PT_REWARD_NTF = 2021;
+  CLIENT_LIMIT_SIGN2_REQ = 2022;
+  CLIENT_LIMIT_SIGN2_ACK = 2023;
+  CLIENT_LIMIT_SIGN2_NTF = 2024;
+  CLIENT_MONTHLY_TOWER_SCORE_NTF = 2025;
+  CLIENT_FRIEND_FIGHT_REQ = 2026;
+  CLIENT_FRIEND_FIGHT_ACK = 2027;
+  CLIENT_FRIEND_FIGHT_NTF = 2028;
+  CLIENT_CAKE_BUILD_REQ = 2029;
+  CLIENT_CAKE_BUILD_ACK = 2030;
+  CLIENT_CAKE_BUILD_NTF = 2031;
+  CLIENT_SEND_GIFT_REQ = 2032;
+  CLIENT_SEND_GIFT_ACK = 2033;
+  CLIENT_SEND_GIFT_NTF = 2034;
+  CLIENT_RETURN_GIFT_REQ = 2035;
+  CLIENT_RETURN_GIFT_ACK = 2036;
+  CLIENT_RETURN_GIFT_NTF = 2037;
+  CLIENT_GET_GIFT_INFO_REQ = 2038;
+  CLIENT_GET_GIFT_INFO_ACK = 2039;
+  CLIENT_GET_GIFT_INFO_NTF = 2040;
+  CLIENT_LIMIT_SIGN2_LOGIN_NTF = 2041;
+  CLIENT_SELECT_UP_NTF = 2042;
+  CLIENT_GET_POOL_PROPS_REQ = 2043;
+  CLIENT_GET_POOL_PROPS_ACK = 2044;
+  CLIENT_GET_POOL_PROPS_NTF = 2045;
+  CLIENT_SELECT_UP_GACHA_REQ = 2046;
+  CLIENT_SELECT_UP_GACHA_ACK = 2047;
+  CLIENT_SELECT_UP_GACHA_NTF = 2048;
+  CLIENT_SELECT_ROLE_UP_REQ = 2049;
+  CLIENT_SELECT_ROLE_UP_ACK = 2050;
+  CLIENT_SELECT_ROLE_UP_NTF = 2051;
+  CLIENT_GET_MOON_PVP_RANK_REQ = 2052;
+  CLIENT_GET_MOON_PVP_RANK_ACK = 2053;
+  CLIENT_GET_MOON_PVP_RANK_NTF = 2054;
+  CLIENT_MOON_PVP_FIGHT_REQ = 2055;
+  CLIENT_MOON_PVP_FIGHT_ACK = 2056;
+  CLIENT_MOON_PVP_FIGHT_FIRST_NTF = 2057;
+  CLIENT_MOON_PVP_FIGHT_SECOND_NTF = 2058;
+  CLIENT_GET_MOON_PVP_RECORD_REQ = 2059;
+  CLIENT_GET_MOON_PVP_RECORD_ACK = 2060;
+  CLIENT_GET_MOON_PVP_RECORD_NTF = 2061;
+  CLIENT_SAVE_ERROR_INFO_REQ = 2062;
+  CLIENT_SAVE_ERROR_INFO_ACK = 2063;
+  CLIENT_LIMIT_SIGN_REQ = 2064;
+  CLIENT_LIMIT_SIGN_ACK = 2065;
+  CLIENT_LIMIT_SIGN_NTF = 2066;
+  CLIENT_GET_LADDER_SCORE_INFO_REQ = 2067;
+  CLIENT_GET_LADDER_SCORE_INFO_ACK = 2068;
+  CLIENT_GET_LADDER_SCORE_INFO_NTF = 2069;
+  CLIENT_GET_CHAMPION_SCORE_RANK_REQ = 2070;
+  CLIENT_GET_CHAMPION_SCORE_RANK_ACK = 2071;
+  CLIENT_GET_CHAMPION_SCORE_RANK_NTF = 2072;
+  CLIENT_SKIN_RANDOM_REQ = 2073;
+  CLIENT_SKIN_RANDOM_ACK = 2074;
+  CLIENT_SKIN_RANDOM_NTF = 2075;
+  CLIENT_GET_CHAMPION_MATCH_REQ = 2076;
+  CLIENT_GET_CHAMPION_MATCH_ACK = 2077;
+  CLIENT_GET_CHAMPION_MATCH_NTF = 2078;
+  CLIENT_GET_CHAMPION_HISTORY_REQ = 2079;
+  CLIENT_GET_CHAMPION_HISTORY_ACK = 2080;
+  CLIENT_GET_CHAMPION_HISTORY_NTF = 2081;
+  CLIENT_CHAMPION_VOTE_REQ = 2082;
+  CLIENT_CHAMPION_VOTE_ACK = 2083;
+  CLIENT_CHAMPION_VOTE_NTF = 2084;
+  CLIENT_LIMIT_SIGN2_INFO_REQ = 2085;
+  CLIENT_LIMIT_SIGN2_INFO_ACK = 2086;
+  CLIENT_LIMIT_SIGN2_INFO_NTF = 2087;
+  CLIENT_ACTIVITY_LIST_REQ = 2094;
+  CLIENT_ACTIVITY_LIST_ACK = 2095;
+  CLIENT_ACTIVITY_LIST_NTF = 2096;
+  CLIENT_SET_SEQUIPOFF_REQ = 2097;
+  CLIENT_SET_SEQUIPOFF_ACK = 2098;
+  CLIENT_SET_SEQUIPOFF_NTF = 2099;
+  CLIENT_SET_FRIEND_BLOCK_REQ = 2204;
+  CLIENT_SET_FRIEND_BLOCK_ACK = 2205;
+  CLIENT_SET_FRIEND_BLOCK_NTF = 2206;
+  CLIENT_OPEN_NEW_ACTIVITY_NTF = 2207;
+  CLIENT_BINGO_INFO_REQ = 2224;
+  CLIENT_BINGO_INFO_ACK = 2225;
+  CLIENT_BINGO_INFO_NTF = 2226;
+  CLIENT_BINGO_DRAW_REQ = 2227;
+  CLIENT_BINGO_DRAW_ACK = 2228;
+  CLIENT_BINGO_DRAW_NTF = 2229;
+  CLIENT_GET_CHAMPION_HISTORY_TEAM_REQ = 2230;
+  CLIENT_GET_CHAMPION_HISTORY_TEAM_ACK = 2231;
+  CLIENT_GET_CHAMPION_HISTORY_TEAM_NTF = 2232;
+}
+
+message PayCard {
+  int32 cardID = 1;
+  int64 buyTime = 2;
+  int64 remaining = 3;
+}
+
+message ClientHasNewOrderInfoNTF {
+  repeated GoodsItem goods = 1;
+  MonthCard card = 2;
+  BigMonthCard bigCard = 3;
+  int64 recharge = 4;
+  PassesLevel passesLevel = 5;
+  int32 id = 6;
+  FundCard fundCard = 7;
+  repeated ShopInfo shops = 8;
+  repeated GoodsItem allGoods = 9;
+  repeated event events = 10;
+  repeated PayCard cards = 11;
+  VigorInfo vigor = 12;
+}
+
+message ClientReconnectREQ {
+  string token = 1;
+  int32 isText = 2;
+  string ver = 3;
+}
+
+message ClientReconnectACK {
+  int32 errNo = 1;
+}
+
+message ClientHasNewFriendSupportInfoNTF {
+  string rev = 1;
+}
+
+message ClientHasNewFriendInfoNTF {
+  string rev = 1;
+}
+
+message ClientNewEmailNTF {
+  string rev = 1;
+}
+
+message ClientStatisticsChooseNTF {
+  string rev = 1;
+}
+
+message LineInfo {
+  int32 length = 1;
+  int32 location = 2;
+  int32 serverLength = 3;
+}
+
+message HeartbeatMSG {
+  string rev = 1;
+}
+
+message GoodsItem {
+  int32 goodsType = 1;
+  int32 goodsID = 2;
+  int32 goodsNum = 3;
+}
+
+message VigorInfo {
+  int32 vigorNum = 1;
+  int64 vigorTime = 2;
+}
+
+message ShopInfo {
+  int32 shopID = 1;
+  int32 shopCount = 2;
+}
+
+message LevelInfo {
+  int32 levelID = 1;
+  int32 levelStar = 2;
+  int32 levelCount = 3;
+  int32 levelPerfectCount = 4;
+}
+
+message HeroInfo {
+  int32 heroID = 1;
+  int32 heroLevel = 2;
+  int32 heroExp = 3;
+  int32 heroStar = 4;
+  int32 heroAwaken = 5;
+  int32 heroSkillLevel = 6;
+  int32 heroArmor1 = 7;
+  int32 heroArmor2 = 8;
+  int64 heroCTime = 9;
+  int32 heroFavor = 10;
+  int32 heroCurSkill = 11;
+  int32 heroFlag = 12;
+  int32 heroDefArmor1 = 13;
+  int32 heroDefArmor2 = 14;
+  int32 sEquipOff = 15;
+}
+
+message LotteryInfo {
+  int32 lotteryID = 1;
+  int32 lotteryCount = 2;
+  int32 lotteryUP = 3;
+}
+
+message ArmorInfo {
+  int32 ID = 1;
+  int32 armorProperties = 2;
+  int32 armorID = 3;
+  int32 armorExp = 4;
+  int32 armorType = 5;
+  int32 armorSkill = 6;
+  int32 armorRoleID = 7;
+  int32 armorSlot = 8;
+  int32 armorUpCount = 9;
+  int64 armorGTime = 10;
+  int32 armorStatus = 11;
+  repeated SlotGroup armorGroup = 12;
+}
+
+message EquipInfo {
+  int32 equipID = 1;
+  int32 equipLevel = 2;
+}
+
+message SEquipInfo {
+  int32 ID = 1;
+  int32 Level = 2;
+  int32 Grade = 3;
+}
+
+message EmailInfo {
+  uint64 emailID = 1;
+  int32 emailType = 2;
+  string emailName = 3;
+  string emailHead = 4;
+  string emailTitle = 5;
+  string emailTxt = 6;
+  repeated GoodsItem emailGoods = 7;
+  int64 emailGTime = 8;
+  int64 emailETime = 9;
+  int32 emailStatus = 10;
+  string emailParam = 11;
+}
+
+message Statistic {
+  int32 statisticID = 1;
+  int32 statisticValue = 2;
+}
+
+message TaskInfo {
+  int32 taskID = 1;
+  int32 taskType = 2;
+}
+
+message Ranknfo {
+  int32 score = 1;
+  int32 rank = 2;
+  string nike = 3;
+  int32 head = 4;
+  int32 headFrame = 5;
+  int32 level = 6;
+  int32 count = 7;
+  string title = 8;
+  int32 id = 9;
+  int32 rankLevel = 10;
+}
+
+message FighterBase {
+  int32 index = 1;
+  int32 roleID = 2;
+}
+
+message FighterAttr {
+  FighterBase base = 1;
+  int32 star = 2;
+  int32 level = 3;
+  int32 awaken = 4;
+  int32 skill = 5;
+  int32 body = 6;
+  int32 boss = 7;
+  int32 armorID1 = 8;
+  int32 armorRatio1 = 9;
+  int32 armorSkill1 = 10;
+  int32 armorID2 = 11;
+  int32 armorRatio2 = 12;
+  int32 armorSkill2 = 13;
+  repeated int32 equipLevel = 14;
+  int32 favor = 15;
+  bool heroFlag = 16;
+  SEquipInfo SEquip = 17;
+}
+
+message TryHeroPropInfo {
+  repeated Fighter data = 1;
+}
+
+message TryHeroList {
+  repeated TryHeroInfo data = 1;
+}
+
+message TryHeroInfo {
+  int32 uid = 1;
+  int32 roleID = 2;
+  int32 pos = 3;
+  int32 atkOrder = 4;
+}
+
+message TeamInfo {
+  int32 index = 1;
+  string name = 2;
+  repeated FighterBase data = 3;
+  TryHeroList tryHero = 4;
+}
+
+message TowerInfo {
+  int32 towerID = 1;
+  repeated int32 reward = 2;
+}
+
+message HighLadderBase {
+  int32 rank = 1;
+  int32 score = 2;
+  int32 maxRankLevel = 3;
+  int32 maxScore = 4;
+  int32 lastRankLevel = 5;
+  int32 lastScore = 6;
+  int32 attackWin = 7;
+  int32 attackLos = 8;
+  int32 defendWin = 9;
+  int32 defendLos = 10;
+  int32 rankLevel = 11;
+  int32 championTop = 12;
+}
+
+message HomeInfo {
+  int32 homeId = 1;
+  int64 cTime = 2;
+  int64 uTime = 3;
+}
+
+message ExpeditionInfo {
+  int32 id = 1;
+  int32 expeditionId = 2;
+  repeated int32 heroIds = 3;
+  int32 status = 4;
+  int64 uTime = 5;
+}
+
+message Donate {
+  int32 id = 1;
+  int32 count = 2;
+}
+
+message Regression {
+  int64 CreateAt = 1;
+  int64 CloseDAt = 2;
+  bool Status = 3;
+  int32 RewardCount = 4;
+  string RewardIDS = 5;
+  bool OnceStatus = 6;
+  int32 Interval = 7;
+}
+
+message ClientGoodsREQ {
+  string rev = 1;
+}
+
+message ClientGoodsACK {
+  int32 errNo = 1;
+}
+
+message ClientGoodsNTF {
+  int32 expand = 1;
+  repeated GoodsItem goods = 2;
+  repeated ArmorInfo armor = 3;
+}
+
+message MarqueeItem {
+  int32 id = 1;
+  int64 startTime = 2;
+  int64 stopTime = 3;
+  int64 intervalTime = 4;
+  string text = 5;
+}
+
+message ActivityItem {
+  int32 userId = 1;
+  int32 activityId = 2;
+  int32 version = 3;
+  int32 score = 4;
+  int64 uTime = 5;
+  string reward = 6;
+  int64 recharge = 7;
+  int32 rewardCount = 8;
+  int64 rewardTime = 9;
+  TimeInfo timeInfo = 10;
+  int32 ExpansionLevel = 11;
+  int32 poolID = 12;
+  string goods = 13;
+  repeated RoleBonus roleBonus = 14;
+}
+
+message RoleBonus {
+  int32 levelID = 1;
+  repeated RoleBonusRole roleBonusRole = 2;
+}
+
+message RoleBonusRole {
+  int32 roleID = 1;
+  repeated RoleBonusItem roleBonusItem = 2;
+}
+
+message RoleBonusItem {
+  string item = 1;
+  int32 BonusPer = 2;
+}
+
+message ClientVerifyREQ {
+  string token = 1;
+  int32 isText = 2;
+  string ver = 3;
+}
+
+message ClientVerifyACK {
+  int32 errNo = 1;
+}
+
+message TimeInfo {
+  int32 ID = 1;
+  int32 timeType = 2;
+  string openWeek = 3;
+  string dayOpenTime = 4;
+  string dayEndTime = 5;
+  int64 openTime = 6;
+  int64 endTime = 7;
+}
+
+message LimitSignUnit {
+  int32 activityId = 1;
+  int32 day = 2;
+  string time = 3;
+  int32 ableDay = 4;
+}
+
+message ClientVerifyNTF {
+  int32 errNo = 1;
+  int32 userID = 2;
+  string nike = 3;
+  int32 head = 4;
+  int32 alliance = 5;
+  int32 level = 6;
+  int32 exp = 7;
+  int32 status = 8;
+  int64 cTime = 9;
+  int64 uTime = 10;
+  int32 reNameNum = 11;
+  string title = 12;
+  int32 mSign = 13;
+  int32 wSign = 14;
+  int64 nTime = 15;
+  int32 menuRoleID = 16;
+  int32 newEmailNum = 17;
+  int32 expand = 18;
+  VigorInfo vigor = 19;
+  repeated LevelInfo levels = 20;
+  repeated GoodsItem goods = 21;
+  repeated HeroInfo heros = 22;
+  repeated LotteryInfo lotterys = 23;
+  repeated ArmorInfo armors = 24;
+  repeated EquipInfo equips = 25;
+  repeated ShopInfo shops = 26;
+  int32 dayScore = 27;
+  int32 weekScore = 28;
+  int32 monthScore = 29;
+  repeated Statistic glory = 30;
+  repeated Statistic day = 31;
+  repeated Statistic week = 32;
+  repeated Statistic month = 33;
+  repeated TaskInfo task = 34;
+  repeated int32 dayReward = 35;
+  repeated int32 weekReward = 36;
+  repeated int32 monthReward = 37;
+  repeated int32 scrollBox = 38;
+  string chatAddr = 39;
+  int64 monthCardBuyTime = 40;
+  int64 monthCardRemaining = 41;
+  int32 headFrame = 42;
+  string signature = 43;
+  repeated TowerInfo tower = 44;
+  repeated int32 guide = 45;
+  repeated int32 tutorial = 46;
+  string mSignTime = 47;
+  string wSignTime = 48;
+  int64 bigMonthCardBuyTime = 49;
+  int32 bigMonthCardVersion = 50;
+  repeated MarqueeItem marquee = 51;
+  repeated int32 manual = 52;
+  repeated HomeInfo home = 53;
+  int32 newFriendNum = 54;
+  int32 homeRule = 55;
+  repeated TeamInfo TeamInfo = 56;
+  repeated ExpeditionInfo expeditionInfos = 57;
+  repeated ShopInfo buyShops = 58;
+  repeated ActivityItem events = 59;
+  bool summerAward = 60;
+  repeated LevelInfo activity = 61;
+  repeated int32 activityPos = 62;
+  int32 supportNum = 63;
+  repeated int32 unGetEmail = 64;
+  repeated int32 getEmail = 65;
+  string birthday = 66;
+  int64 amendBirthday = 67;
+  repeated int32 skin = 68;
+  int64 calmTime = 69;
+  repeated Donate donate = 70;
+  int64 fundCardBuyTime = 71;
+  int32 fundCardVersion = 72;
+  repeated TimeInfo timeInfo = 73;
+  repeated LimitSignUnit limitSign = 74;
+  repeated SEquipInfo SEquips = 75;
+  repeated PayPackInfo PayPackInfoS = 76;
+  int32 weekCopyNum = 77;
+  Regression regression = 78;
+  repeated LightDarkFreeTime LightDarkFreeTime = 79;
+  bool mSignFlag = 80;
+  repeated RecruitIndex recruitIndex = 81;
+  repeated LimitGoodsItem limitGoods = 82;
+  repeated PayCard cards = 83;
+}
+
+message LimitGoodsItem {
+  int32 goodsType = 1;
+  int32 goodsID = 2;
+  int32 goodsNum = 3;
+  int64 ETime = 4;
+}
+
+message ClientVersionInfo {
+  int32 errNo = 1;
+  string updateAddr = 2;
+  string cVersion = 3;
+  string sVersion = 4;
+}
+
+message ClientRegisterResult {
+  int32 errNo = 1;
+}
+
+message ClientDeedStatisticsReq {
+  repeated Info infos = 1;
+}
+
+message ClientLoginResult {
+  int32 errNo = 1;
+  int32 userID = 2;
+  string token = 3;
+  string addrGate = 4;
+  int32 noticeVersion = 5;
+  string account = 6;
+  string password = 7;
+  string errMsg = 8;
+  string sdkInfo = 9;
+}
+
+message ClientResetResult {
+  int32 errNo = 1;
+  string nPassword = 2;
+}
+
+message ClientPVEBattleREQ {
+  int32 levelID = 1;
+  repeated FighterBase team = 2;
+}
+
+message ClientPVEBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientPVEBattleNTF {
+  repeated Video video = 1;
+}
+
+message ClientLevelInfoREQ {
+  int32 type = 1;
+}
+
+message ClientLevelInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientLevelInfoNTF {
+  repeated LevelInfo level = 1;
+  repeated int32 scrollBox = 2;
+  repeated TowerInfo tower = 3;
+  repeated int32 guide = 4;
+  repeated item hp = 5;
+  repeated LevelInfo activity = 6;
+}
+
+message ClientSignInREQ {
+  int32 type = 1;
+  int32 date = 2;
+}
+
+message ClientSignInACK {
+  int32 errNo = 1;
+}
+
+message ClientSignInNTF {
+  repeated Goods goods = 1;
+  repeated Statistic glory = 2;
+  repeated Statistic day = 3;
+  repeated Statistic week = 4;
+  repeated Statistic month = 5;
+  int32 type = 6;
+  int32 mSign = 7;
+  VigorInfo vigor = 8;
+}
+
+message ClientRecruitREQ {
+  int32 recruitID = 1;
+  int32 type = 2;
+  int32 count = 3;
+  int32 target = 4;
+  int32 channel = 5;
+  int32 clientRecruitIndex = 6;
+}
+
+message ClientRecruitACK {
+  int32 errNo = 1;
+}
+
+message ClientRecruitNTF {
+  repeated Hero heros = 1;
+  repeated GoodsItem cost = 2;
+  int32 up = 3;
+  int32 count = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  int32 recruitId = 9;
+  repeated GoodsItem goods = 10;
+  int32 recruitIndex = 11;
+}
+
+message ClientRecruitRepeatREQ {
+  string rev = 1;
+}
+
+message ClientRecruitRepeatACK {
+  int32 errNo = 1;
+  ClientRecruitNTF ntf = 2;
+}
+
+message ClientJoinClubChatREQ {
+  string rev = 1;
+}
+
+message ClientJoinClubChatACK {
+  int32 errNo = 1;
+}
+
+message ClientNewRecruitREQ {
+  int32 recruitID = 1;
+  int32 type = 2;
+  int32 count = 3;
+  int32 target = 4;
+}
+
+message ClientNewRecruitACK {
+  int32 errNo = 1;
+}
+
+message ClientNewRecruitNTF {
+  repeated Hero heros = 1;
+  repeated GoodsItem cost = 2;
+}
+
+message ClientNewRecruitGetREQ {
+  int32 progress = 1;
+}
+
+message ClientNewRecruitGetACK {
+  int32 errNo = 1;
+}
+
+message ClientNewRecruitGetNTF {
+  repeated Hero heros = 1;
+  repeated GoodsItem cost = 2;
+  int32 up = 3;
+  int32 count = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  int32 progress = 9;
+}
+
+message ClientTaskPerformREQ {
+  int32 taskType = 1;
+  int32 taskID = 2;
+  int32 subType = 3;
+}
+
+message ClientTaskPerformACK {
+  int32 errNo = 1;
+}
+
+message ClientTaskPerformNTF {
+  int32 taskType = 1;
+  repeated int32 taskID = 2;
+  repeated GoodsItem reward = 3;
+  repeated GoodsItem medal = 4;
+  int32 dayScore = 5;
+  int32 weekScore = 6;
+  int32 monthScore = 7;
+  repeated Statistic glory = 8;
+  repeated Statistic day = 9;
+  repeated Statistic week = 10;
+  repeated Statistic month = 11;
+  repeated Events events = 12;
+}
+
+message ClientHeroStarREQ {
+  int32 heroID = 1;
+  int32 heroStar = 2;
+}
+
+message ClientHeroStarACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroStarNTF {
+  repeated GoodsItem cost = 1;
+  HeroInfo info = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientHeroLevelUPREQ {
+  int32 heroID = 1;
+  repeated GoodsItem cost = 2;
+}
+
+message ClientHeroLevelUPACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroLevelUPNTF {
+  repeated GoodsItem cost = 1;
+  HeroInfo info = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientHeroFavorUPREQ {
+  int32 heroID = 1;
+  repeated GoodsItem cost = 2;
+}
+
+message ClientHeroFavorUPACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroFavorUPNTF {
+  repeated GoodsItem cost = 1;
+  HeroInfo info = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientHeroDataREQ {
+  string rev = 1;
+}
+
+message ClientHeroDataACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroDataNTF {
+  repeated HeroInfo info = 1;
+}
+
+message ClientHeroSkillUPREQ {
+  int32 heroID = 1;
+  int32 heroSkill = 2;
+  int32 heroTargetSkill = 3;
+}
+
+message ClientHeroSkillUPACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroSkillUPNTF {
+  repeated GoodsItem cost = 1;
+  HeroInfo info = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientArmorMakeREQ {
+  GoodsItem cost = 1;
+}
+
+message ClientArmorMakeACK {
+  int32 errNo = 1;
+}
+
+message ClientArmorMakeNTF {
+  repeated GoodsItem cost = 1;
+  repeated ArmorInfo armor = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientArmorUpGradeREQ {
+  repeated GoodsItem cost = 1;
+  GoodsItem target = 2;
+}
+
+message ClientArmorUpGradeACK {
+  int32 errNo = 1;
+}
+
+message ClientArmorUpGradeNTF {
+  repeated GoodsItem cost = 1;
+  ArmorInfo target = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message Video {
+  uint32 gameActionSkillIDType = 1;
+  int32 skillNum = 2;
+  AddSkillData skillData = 3;
+  DelSkillID delSkillID = 4;
+}
+
+message VideoList {
+  repeated Video video = 1;
+}
+
+message ClientSetLevelStarREQ {
+  int32 levelID = 1;
+  int32 teamID = 2;
+  repeated FighterPoint heroID = 3;
+  friendPoint friendSupport = 4;
+}
+
+message ClientSetLevelStarACK {
+  int32 errNo = 1;
+}
+
+message ClientSetLevelStarNTF {
+  int32 levelID = 1;
+  int32 levelStar = 2;
+  int32 userLevel = 3;
+  int32 userExp = 4;
+  VigorInfo vigor = 5;
+  repeated GoodsItem cost = 6;
+  repeated GoodsItem reward = 7;
+  repeated Hero heroInfos = 8;
+  repeated Statistic glory = 9;
+  repeated Statistic day = 10;
+  repeated Statistic week = 11;
+  repeated Statistic month = 12;
+  BattleVideos video = 13;
+  repeated FighterBase point = 14;
+  int32 percent = 15;
+  repeated int32 activityPos = 16;
+}
+
+message ClientSetLevelStarExREQ {
+  int32 levelID = 1;
+  int32 teamID = 2;
+  repeated FighterPoint heroID = 3;
+  friendPoint friendSupport = 4;
+}
+
+message ClientSetLevelStarExACK {
+  int32 errNo = 1;
+}
+
+message ClientSetLevelStarExNTF {
+  int32 levelID = 1;
+  BattleVideos video = 2;
+}
+
+message ClientTextBattleREQ {
+  repeated FighterAttr attacker = 1;
+  repeated FighterAttr defender = 2;
+  int32 monster = 3;
+}
+
+message ClientTextBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientTextBattleNTF {
+  int32 levelStar = 1;
+  repeated VideoList video = 2;
+}
+
+message ClientTextBattleAttrREQ {
+  repeated Attr attacker = 1;
+  repeated Attr defender = 2;
+  int32 monster = 3;
+}
+
+message ClientTextBattleAttrACK {
+  int32 errNo = 1;
+}
+
+message ClientTextBattleAttrNTF {
+  int32 levelStar = 1;
+  repeated VideoList video = 2;
+}
+
+message ClientSweepLevelStarREQ {
+  int32 levelID = 1;
+  int32 frequency = 2;
+}
+
+message ClientSweepLevelStarACK {
+  int32 errNo = 1;
+}
+
+message ClientSweepLevelStarNTF {
+  int32 levelID = 1;
+  int32 userLevel = 2;
+  int32 userExp = 3;
+  VigorInfo vigor = 4;
+  repeated GoodsItem cost = 5;
+  repeated GoodsItem reward = 6;
+  repeated Statistic glory = 8;
+  repeated Statistic day = 9;
+  repeated Statistic week = 10;
+  repeated Statistic month = 11;
+  int32 weekCopyNum = 12;
+}
+
+message ClientArmorUpExpREQ {
+  repeated GoodsItem cost = 1;
+  GoodsItem target = 2;
+}
+
+message ClientArmorUpExpACK {
+  int32 errNo = 1;
+}
+
+message ClientArmorUpExpNTF {
+  repeated GoodsItem cost = 1;
+  ArmorInfo target = 2;
+  int32 expTime = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+}
+
+message ClientArmorExploitREQ {
+  repeated GoodsItem cost = 1;
+  GoodsItem target = 2;
+}
+
+message ClientArmorExploitACK {
+  int32 errNo = 1;
+}
+
+message ClientArmorExploitNTF {
+  repeated GoodsItem cost = 1;
+  ArmorInfo target = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientDecomposeREQ {
+  repeated GoodsItem target = 1;
+}
+
+message ClientDecomposeACK {
+  int32 errNo = 1;
+}
+
+message ClientDecomposeNTF {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem obtain = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientChangeLockREQ {
+  repeated GoodsItem target = 1;
+  int32 status = 2;
+}
+
+message ClientChangeLockACK {
+  int32 errNo = 1;
+}
+
+message ClientChangeLockNTF {
+  repeated ArmorInfo target = 1;
+}
+
+message ClientEquipDataREQ {
+  string rev = 1;
+}
+
+message ClientEquipDataACK {
+  int32 errNo = 1;
+}
+
+message ClientEquipDataNTF {
+  repeated EquipInfo equip = 1;
+}
+
+message ClientUseGoodsREQ {
+  GoodsItem goods = 1;
+}
+
+message ClientUseGoodsACK {
+  int32 errNo = 1;
+}
+
+message ClientUseGoodsNTF {
+  GoodsItem cost = 1;
+  VigorInfo vigor = 2;
+  repeated GoodsItem goods = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+  repeated EquipInfo equip = 8;
+}
+
+message ClientUseGoodsChooseREQ {
+  GoodsItem goods = 1;
+  GoodsItem target = 2;
+}
+
+message ClientUseGoodsChooseACK {
+  int32 errNo = 1;
+}
+
+message ClientUseGoodsChooseNTF {
+  GoodsItem cost = 1;
+  VigorInfo vigor = 2;
+  repeated GoodsItem goods = 3;
+  repeated Hero heros = 4;
+  repeated EquipInfo equip = 5;
+  repeated Statistic glory = 6;
+  repeated Statistic day = 7;
+  repeated Statistic week = 8;
+  repeated Statistic month = 9;
+  repeated ArmorInfo armor = 10;
+}
+
+message ClientHeroAwakenREQ {
+  int32 heroID = 1;
+}
+
+message ClientHeroAwakenACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroAwakenNTF {
+  repeated GoodsItem cost = 1;
+  HeroInfo info = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ArmorWearInfo {
+  int32 heroID = 1;
+  int32 armorID = 2;
+  int32 armorSolt = 3;
+  int32 oldHeroID = 4;
+  int32 oldSlot = 5;
+  int32 armorGroup = 6;
+}
+
+message ClientHeroChangeArmorREQ {
+  repeated ArmorWearInfo data = 1;
+}
+
+message ClientHeroChangeArmorACK {
+  int32 errNo = 1;
+}
+
+message ClientHeroChangeArmorNTF {
+  repeated ArmorWearInfo data = 1;
+}
+
+message ClientEquipUPREQ {
+  int32 equipID = 1;
+  int32 equipLevel = 2;
+  int32 targetLevel = 3;
+}
+
+message ClientEquipUPACK {
+  int32 errNo = 1;
+}
+
+message ClientEquipUPNTF {
+  repeated GoodsItem cost = 1;
+  int32 equipID = 2;
+  int32 equipLevel = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+}
+
+message ClientEquipSupplyREQ {
+  int32 recruitID = 1;
+  int32 type = 2;
+  int32 count = 3;
+  int32 clientRecruitIndex = 4;
+}
+
+message ClientEquipSupplyACK {
+  int32 errNo = 1;
+}
+
+message ClientEquipSupplyNTF {
+  repeated Equip equips = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  int32 recruitIndex = 7;
+}
+
+message ClientEmailDataREQ {
+  string rev = 1;
+}
+
+message ClientEmailDataACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailDataNTF {
+  repeated EmailInfo email = 1;
+  repeated int32 unGetEmail = 2;
+  repeated int32 getEmail = 3;
+}
+
+message ClientEmailGoodsREQ {
+  uint64 emailID = 1;
+  int32 isBirthday = 2;
+}
+
+message ClientEmailGoodsACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailGoodsNTF {
+  uint64 emailID = 1;
+  repeated GoodsItem goods = 2;
+  int32 isBirthday = 3;
+  VigorInfo vigor = 4;
+  MonthCard card = 5;
+  BigMonthCard bigCard = 6;
+  repeated ShopInfo shops = 7;
+  repeated LimitGoodsItem limitGoods = 8;
+  repeated PayCard cards = 9;
+}
+
+message ClientEmailDeleteREQ {
+  uint64 emailID = 1;
+}
+
+message ClientEmailDeleteACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailDeleteNTF {
+  uint64 emailID = 1;
+}
+
+message ClientEmailGoodsAllREQ {
+  string rev = 1;
+}
+
+message ClientEmailGoodsAllACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailGoodsAllNTF {
+  repeated uint64 emailID = 1;
+  repeated GoodsItem goods = 2;
+  VigorInfo vigor = 3;
+  MonthCard card = 4;
+  BigMonthCard bigCard = 5;
+  repeated ShopInfo shops = 6;
+  repeated LimitGoodsItem limitGoods = 7;
+  repeated PayCard cards = 8;
+}
+
+message ClientEmailDeleteAllREQ {
+  string rev = 1;
+}
+
+message ClientEmailDeleteAllACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailDeleteAllNTF {
+  repeated uint64 emailID = 1;
+}
+
+message ClientBuyGoodsREQ {
+  int32 goodsID = 1;
+  int32 buyNum = 2;
+  int32 channel = 3;
+}
+
+message ClientBuyGoodsACK {
+  int32 errNo = 1;
+}
+
+message ClientBuyGoodsNTF {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem goods = 2;
+  MonthCard card = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+  FundCard fundCard = 8;
+}
+
+message ClientExpandREQ {
+  int32 expand = 1;
+}
+
+message ClientExpandACK {
+  int32 errNo = 1;
+}
+
+message ClientExpandNTF {
+  int32 expand = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientChooseMenuRoleREQ {
+  int32 roleID = 1;
+}
+
+message ClientChooseMenuRoleACK {
+  int32 errNo = 1;
+}
+
+message ClientChooseMenuRoleNTF {
+  int32 roleID = 1;
+}
+
+message ClientChooseHomeRoleREQ {
+  int32 roleID = 1;
+}
+
+message ClientChooseHomeRoleACK {
+  int32 errNo = 1;
+}
+
+message ClientChooseHomeRoleNTF {
+  int32 roleID = 1;
+}
+
+message ClientChooseNikeREQ {
+  string nike = 1;
+}
+
+message ClientChooseNikeACK {
+  int32 errNo = 1;
+}
+
+message ClientChooseNikeNTF {
+  string nike = 1;
+}
+
+message ClientEmailLookREQ {
+  repeated uint64 emailID = 1;
+}
+
+message ClientEmailLookACK {
+  int32 errNo = 1;
+}
+
+message ClientEmailLookNTF {
+  repeated uint64 emailID = 1;
+}
+
+message ClientTaskGetREQ {
+  string rev = 1;
+}
+
+message ClientTaskGetACK {
+  int32 errNo = 1;
+}
+
+message ClientTaskGetNTF {
+  repeated Statistic glory = 1;
+  repeated Statistic day = 2;
+  repeated Statistic week = 3;
+  repeated Statistic month = 4;
+  int32 dayScore = 5;
+  int32 weekScore = 6;
+  int32 monthScore = 7;
+  repeated TaskInfo task = 8;
+  repeated int32 dayReward = 9;
+  repeated int32 weekReward = 10;
+  repeated int32 monthReward = 11;
+}
+
+message ClientSaveProgressREQ {
+  int32 progress = 1;
+}
+
+message ClientSaveProgressACK {
+  int32 errNo = 1;
+}
+
+message ClientSaveProgressNTF {
+  int32 progress = 1;
+  int32 email = 2;
+  repeated GoodsItem goods = 3;
+}
+
+message ClientGetManualREQ {
+  string rev = 1;
+}
+
+message ClientGetManualACK {
+  int32 errNo = 1;
+}
+
+message ClientGetManualNTF {
+  repeated int32 manualID = 1;
+}
+
+message ClientWriteManualREQ {
+  repeated int32 manualID = 1;
+}
+
+message ClientWriteManualACK {
+  int32 errNo = 1;
+}
+
+message ClientWriteManualNTF {
+  repeated int32 manualID = 1;
+  repeated GoodsItem goods = 2;
+  repeated GoodsItem medal = 3;
+}
+
+message ClientGetScoreRewardREQ {
+  int32 scoreID = 1;
+}
+
+message ClientGetScoreRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientGetScoreRewardNTF {
+  int32 scoreID = 1;
+  repeated GoodsItem goods = 2;
+  int32 exp = 3;
+  int32 level = 4;
+  VigorInfo vigor = 5;
+}
+
+message ClientJoinChatREQ {
+  int32 channel = 1;
+  string token = 2;
+}
+
+message ClientJoinChatACK {
+  int32 errNo = 1;
+}
+
+message ClientJoinChatNTF {
+  int32 channel = 1;
+}
+
+message ClientChatREQ {
+  string text = 1;
+  string hand = 2;
+  int32 level = 3;
+}
+
+message ClientChatACK {
+  int32 errNo = 1;
+}
+
+message ClientChatNTF {
+  string text = 1;
+  int32 userid = 2;
+  string hand = 3;
+  int32 level = 4;
+}
+
+message ClientClubChatREQ {
+  string text = 1;
+}
+
+message ClientClubChatACK {
+  int32 errNo = 1;
+}
+
+message ClientClubChatNTF {
+  string text = 1;
+  int32 userid = 2;
+  string name = 3;
+  int64 time = 4;
+  int32 hand = 5;
+  int32 handFrame = 6;
+  int32 job = 7;
+}
+
+message ClientTeamDataREQ {
+  int32 index = 1;
+}
+
+message ClientTeamDataACK {
+  int32 errNo = 1;
+}
+
+message ClientTeamDataNTF {
+  repeated TeamInfo data = 1;
+}
+
+message ClientTeamSaveREQ {
+  repeated TeamInfo data = 1;
+}
+
+message ClientTeamSaveACK {
+  int32 errNo = 1;
+}
+
+message ClientTeamSaveNTF {
+  repeated TeamInfo data = 1;
+}
+
+message ClientChatAddrREQ {
+  string rev = 1;
+}
+
+message ClientChatAddrACK {
+  int32 errNo = 1;
+}
+
+message ClientChatAddrNTF {
+  string addr = 1;
+}
+
+message ClientGetScrollBoxREQ {
+  repeated int32 boxID = 1;
+}
+
+message ClientGetScrollBoxACK {
+  int32 errNo = 1;
+}
+
+message ClientGetScrollBoxNTF {
+  repeated int32 boxID = 1;
+  repeated GoodsItem goods = 2;
+}
+
+message ClientBossBattleREQ {
+  int32 teamID = 1;
+  int64 key = 2;
+  friendPoint friendSupport = 3;
+}
+
+message ClientBossBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientBossBattleNTF {
+  int32 score = 1;
+  int32 count = 2;
+  int32 maxScore = 3;
+  int32 result = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  BattleVideos video = 9;
+  repeated GoodsItem reward = 10;
+  int32 toDayScore = 11;
+  repeated todayScoreSlice array = 12;
+  int32 TotalScore = 13;
+  int32 roundScore = 14;
+  int32 killScore = 15;
+  int32 damageScore = 16;
+  repeated GoodsItem goods = 17;
+}
+
+message ClientBossBattleTextREQ {
+  int32 teamID = 1;
+  int32 bossID = 2;
+}
+
+message ClientBossBattleTextACK {
+  int32 errNo = 1;
+}
+
+message ClientBossBattleTextNTF {
+  int32 score = 1;
+  int32 roundScore = 2;
+  int32 killScore = 3;
+  int32 damageScore = 4;
+  BattleVideos video = 5;
+}
+
+message ClientBossDataREQ {
+  string rev = 1;
+}
+
+message ClientEventBossDataREQ {
+  int32 bossID = 1;
+}
+
+message ClientBossDataACK {
+  int32 errNo = 1;
+}
+
+message todayScoreSlice {
+  int32 index = 1;
+  int32 score = 2;
+}
+
+message ClientBossDataNTF {
+  int64 hp = 1;
+  int64 subKey = 2;
+  int32 nowRank = 3;
+  repeated GoodsItem goods = 4;
+  int32 rewardRank = 5;
+  int32 isGetReward = 6;
+  repeated Ranknfo rankInfo = 7;
+  int32 score = 8;
+  int32 count = 9;
+  int32 bossID = 10;
+  repeated MaxScore maxScores = 11;
+  repeated MaxScore worldScores = 12;
+  int32 todayScore = 13;
+  repeated todayScoreSlice array = 14;
+  int32 totalScore = 15;
+}
+
+message ClientBossRankREQ {
+  int32 pack = 1;
+}
+
+message ClientBossRankEventREQ {
+  int32 bossID = 1;
+  int32 pack = 2;
+}
+
+message ClientBossRankACK {
+  int32 errNo = 1;
+}
+
+message ClientBossRankNTF {
+  int32 nowPack = 1;
+  int32 maxPack = 2;
+  repeated Ranknfo rankInfo = 3;
+}
+
+message ClientBossMultipleBattleREQ {
+  int32 teamID = 1;
+  int64 key = 2;
+  friendPoint friendSupport = 3;
+}
+
+message ClientBossMultipleBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientBossMultipleBattleNTF {
+  int32 score = 1;
+  int32 result = 2;
+  BattleVideos video = 3;
+}
+
+message ClientBossMultipleSettleNTF {
+  repeated WorldBossScore worldBossScore = 1;
+  int32 totalScore = 2;
+  int32 count = 3;
+  int32 maxScore = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  repeated GoodsItem reward = 9;
+  repeated GoodsItem goods = 10;
+}
+
+message ClientBossMultipleBattleTextREQ {
+  int32 teamID = 1;
+  int32 bossID = 2;
+}
+
+message ClientBossMultipleBattleTextACK {
+  int32 errNo = 1;
+}
+
+message ClientBossMultipleBattleTextNTF {
+  int32 score = 1;
+  BattleVideos video = 2;
+}
+
+message ClientEventBossMultipleDataREQ {
+  int32 activityID = 1;
+}
+
+message ClientBossMultipleDataACK {
+  int32 errNo = 1;
+}
+
+message ClientBossMultipleDataNTF {
+  repeated BossInfo bossInfo = 1;
+  int32 activityID = 2;
+  int32 nowRank = 3;
+  repeated GoodsItem goods = 4;
+  int32 rewardRank = 5;
+  int32 isGetReward = 6;
+  repeated Ranknfo rankInfo = 7;
+  int32 score = 8;
+  int32 count = 9;
+  repeated MaxScore maxScores = 10;
+  repeated MaxScore worldScores = 11;
+  int32 todayScore = 12;
+  int32 totalScore = 13;
+  ChallengeInfo challengeInfo = 14;
+}
+
+message ClientBossMultipleRankEventREQ {
+  int32 activityID = 1;
+  int32 pack = 2;
+}
+
+message ClientBossMultipleRankACK {
+  int32 errNo = 1;
+}
+
+message ClientBossMultipleRankNTF {
+  int32 nowPack = 1;
+  int32 maxPack = 2;
+  repeated Ranknfo rankInfo = 3;
+}
+
+message ClientHighLadderDataREQ {
+  int32 type = 1;
+}
+
+message ClientHighLadderDataACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderDataNTF {
+  int32 score = 1;
+  int32 rank = 2;
+  int32 card = 3;
+  int64 cardUTime = 4;
+  repeated FighterBase team = 5;
+  RecordInfo attack = 6;
+  RecordInfo defense = 7;
+  repeated int32 banRole = 8;
+  repeated int32 banNext = 9;
+  int32 type = 10;
+  int32 bCount = 11;
+  int64 bTime = 12;
+  int32 existBattleRecord = 13;
+  int64 startTime = 14;
+  int64 endTime = 15;
+  int32 RankLevel = 16;
+  int32 RankLevelPercent = 17;
+  bool isSettle = 18;
+}
+
+message ClientHighLadderBattleREQ {
+  int32 type = 1;
+}
+
+message ClientHighLadderBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderBattleNTF {
+  string token = 1;
+  string name = 2;
+  int32 score = 3;
+  int32 rank = 4;
+  repeated FighterAttr team = 5;
+  string selfName = 6;
+  int32 selfScore = 7;
+  int32 selfRank = 8;
+  repeated FighterAttr selfTeam = 9;
+  int32 result = 10;
+  int32 type = 11;
+  repeated VideoList video = 12;
+  repeated GoodsItem goods = 13;
+  int32 aScore = 14;
+  int32 aRank = 15;
+  int32 dScore = 16;
+  int32 dRank = 17;
+  repeated Statistic day = 18;
+  repeated Statistic week = 19;
+  repeated Statistic month = 20;
+  repeated Statistic glory = 21;
+}
+
+message ClientHighLadderBattleResultREQ {
+  string token = 1;
+  int32 result = 2;
+}
+
+message ClientHighLadderBattleResultACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderBattleResultNTF {
+  repeated GoodsItem goods = 1;
+  int32 aScore = 2;
+  int32 aRank = 3;
+  int32 dScore = 4;
+  int32 dRank = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  repeated Statistic glory = 9;
+}
+
+message ClientHighLadderPlayBackREQ {
+  string token = 1;
+}
+
+message ClientHighLadderPlayBackACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderPlayBackNTF {
+  string dName = 1;
+  int32 dScore = 2;
+  int32 dRank = 3;
+  repeated FighterAttr dTeam = 4;
+  string aName = 5;
+  int32 aScore = 6;
+  int32 aRank = 7;
+  repeated FighterAttr aTeam = 8;
+  int64 seed = 9;
+  int32 winScore = 10;
+  int32 losScore = 11;
+  int32 dRankN = 12;
+  int32 aRankN = 13;
+  int32 result = 14;
+}
+
+message ClientSetHeadREQ {
+  int32 headID = 1;
+}
+
+message ClientSetHeadACK {
+  int32 errNo = 1;
+}
+
+message ClientSetHeadNTF {
+  int32 headID = 1;
+}
+
+message ClientSetHeadFrameREQ {
+  int32 headFrameID = 1;
+}
+
+message ClientSetHeadFrameACK {
+  int32 errNo = 1;
+}
+
+message ClientSetHeadFrameNTF {
+  int32 headFrameID = 1;
+}
+
+message ClientSetSignatureREQ {
+  string signature = 1;
+}
+
+message ClientSetSignatureACK {
+  int32 errNo = 1;
+}
+
+message ClientSetSignatureNTF {
+  string signature = 1;
+}
+
+message ClientSetTitleREQ {
+  string titleID = 1;
+}
+
+message ClientSetTitleACK {
+  int32 errNo = 1;
+}
+
+message ClientSetTitleNTF {
+  string titleID = 1;
+}
+
+message ClientGetHighLadderBaseREQ {
+  string rev = 1;
+}
+
+message ClientGetHighLadderBaseACK {
+  int32 errNo = 1;
+}
+
+message ClientGetHighLadderBaseNTF {
+  HighLadderBase big = 1;
+  HighLadderBase small = 2;
+}
+
+message ClientGetHighLadderRankREQ {
+  int32 type = 1;
+  int32 version = 2;
+  int32 pack = 3;
+}
+
+message ClientGetHighLadderRankACK {
+  int32 errNo = 1;
+}
+
+message ClientGetHighLadderRankNTF {
+  int32 type = 1;
+  int32 nowVersion = 2;
+  int32 version = 3;
+  int32 pack = 4;
+  int32 maxPack = 5;
+  repeated Ranknfo info = 6;
+  Ranknfo lastRankFirst = 7;
+}
+
+message ClientGetTowerRewardREQ {
+  int32 towerID = 1;
+  int32 roundNum = 2;
+  int32 dieNum = 3;
+  repeated FighterBase heroID = 4;
+}
+
+message ClientGetTowerRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientGetTowerRewardNTF {
+  TowerInfo info = 1;
+  repeated GoodsItem reward = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  repeated VideoList video = 7;
+  int32 result = 8;
+}
+
+message ClientTowerBattleREQ {
+  int32 towerID = 1;
+  repeated FighterBase heroID = 2;
+}
+
+message ClientTowerBattleACK {
+  int32 errNo = 1;
+}
+
+message ClientTowerBattleNTF {
+  int32 levelID = 1;
+  BattleVideos video = 2;
+  int32 result = 3;
+}
+
+message ClientTowerRewardREQ {
+  int32 status = 1;
+}
+
+message ClientTowerRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientTowerRewardNTF {
+  TowerInfo info = 1;
+  repeated GoodsItem reward = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientBuySpecialREQ {
+  int32 id = 1;
+}
+
+message ClientBuySpecialACK {
+  int32 errNo = 1;
+}
+
+message ClientBuySpecialNTF {
+  int32 id = 1;
+  GoodsItem goods = 2;
+  repeated GoodsItem cost = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+}
+
+message ClientGetBuyNumberREQ {
+  int32 type = 1;
+}
+
+message ClientGetBuyNumberACK {
+  int32 errNo = 1;
+}
+
+message ClientGetBuyNumberNTF {
+  repeated ShopInfo buyItem = 1;
+  repeated ShopInfo dayItem = 2;
+  repeated ShopInfo weekItem = 3;
+  repeated ShopInfo monthItem = 4;
+  repeated ShopInfo yearItem = 5;
+  repeated ShopInfo unResetItem = 6;
+  int64 monthCardBuyTime = 7;
+  int64 monthCardRemaining = 8;
+  int64 bigMonthCardBuyTime = 9;
+  int32 bigMonthCardVersion = 10;
+  repeated PayCard cards = 11;
+}
+
+message ClientGetHomeDataREQ {
+  string rev = 1;
+}
+
+message ClientGetHomeDataACK {
+  int32 errNo = 1;
+}
+
+message ClientGetHomeDataNTF {
+  repeated HomeInfo info = 1;
+  int32 role = 2;
+}
+
+message ClientHomeBuildREQ {
+  int32 homeId = 1;
+}
+
+message ClientHomeBuildACK {
+  int32 errNo = 1;
+}
+
+message ClientHomeBuildNTF {
+  repeated GoodsItem cost = 1;
+  HomeInfo homeInfo = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  int32 frontHomeID = 7;
+  repeated GoodsItem goods = 8;
+  VigorInfo vigor = 9;
+}
+
+message ClientHomeBaseBuildREQ {
+  string rev = 1;
+}
+
+message ClientHomeBaseBuildACK {
+  int32 errNo = 1;
+}
+
+message ClientHomeBaseBuildNTF {
+  repeated HomeInfo homeInfo = 1;
+}
+
+message ClientHomeReapREQ {
+  int32 homeId = 1;
+}
+
+message ClientHomeReapACK {
+  int32 errNo = 1;
+}
+
+message ClientHomeReapNTF {
+  repeated GoodsItem goods = 1;
+  repeated item homeUP = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  VigorInfo vigor = 7;
+}
+
+message ClientStartHomeExpeditionREQ {
+  repeated Item expeditions = 1;
+}
+
+message ClientStartHomeExpeditionACK {
+  int32 errNo = 1;
+}
+
+message ClientStartHomeExpeditionNTF {
+  repeated ExpeditionInfo expeditionInfos = 1;
+}
+
+message ClientEndHomeExpeditionREQ {
+  repeated int32 Ids = 1;
+  int32 homeId = 2;
+}
+
+message ClientEndHomeExpeditionACK {
+  int32 errNo = 1;
+}
+
+message ClientEndHomeExpeditionNTF {
+  repeated Item rewardsInfos = 1;
+  repeated Statistic glory = 2;
+  repeated Statistic day = 3;
+  repeated Statistic week = 4;
+  repeated Statistic month = 5;
+}
+
+message ClientCancelHomeExpeditionREQ {
+  repeated int32 Ids = 1;
+}
+
+message ClientCancelHomeExpeditionACK {
+  int32 errNo = 1;
+}
+
+message ClientCancelHomeExpeditionNTF {
+  repeated ExpeditionInfo expeditionInfos = 1;
+}
+
+message ClientGetHomeExpeditionREQ {
+  int32 homeId = 1;
+}
+
+message ClientGetHomeExpeditionACK {
+  int32 errNo = 1;
+}
+
+message ClientGetHomeExpeditionNTF {
+  repeated ExpeditionInfo expeditionInfos = 1;
+}
+
+message ClientHomeMakeREQ {
+  int32 id = 1;
+  int32 count = 2;
+}
+
+message ClientHomeMakeACK {
+  int32 errNo = 1;
+}
+
+message ClientHomeMakeNTF {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem goods = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  repeated EquipInfo equip = 7;
+}
+
+message ClientSkillMaterialsMakeREQ {
+  repeated item items = 1;
+}
+
+message ClientSkillMaterialsMakeACK {
+  int32 errNo = 1;
+}
+
+message ClientSkillMaterialsMakeNTF {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem goods = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientGetGameInfoREQ {
+  string rev = 1;
+}
+
+message ClientGetGameInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientGetGameInfoNTF {
+  int32 mapID = 1;
+  int32 pos = 2;
+  int32 answer = 3;
+  int32 count = 4;
+  repeated int32 events = 5;
+  int32 maxCount = 6;
+  int32 roleID = 7;
+}
+
+message ClientReportGameInfoREQ {
+  int32 eventID = 1;
+  int32 score = 2;
+}
+
+message ClientReportGameInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientReportGameInfoNTF {
+  int32 eventID = 1;
+  int32 pos = 2;
+  int32 count = 3;
+  repeated int32 events = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+}
+
+message ClientAnswerGameInfoREQ {
+  int32 roleID = 1;
+}
+
+message ClientAnswerGameInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientAnswerGameInfoNTF {
+  int32 result = 1;
+  int32 heroID = 2;
+  int32 heroFavor = 3;
+}
+
+message ClientGetFriendInfoREQ {
+  int32 page = 1;
+  int32 status = 2;
+}
+
+message ClientGetFriendInfoACK {
+  int32 errNo = 1;
+}
+
+message FriendSupportInfo {
+  int32 heroID = 1;
+  int32 heroLevel = 2;
+  int32 heroExp = 3;
+  int32 heroStar = 4;
+  int32 heroAwaken = 5;
+  int32 heroSkillLevel = 6;
+  ArmorInfo heroArmor1 = 7;
+  ArmorInfo heroArmor2 = 8;
+  int64 heroCTime = 9;
+  int32 heroFavor = 10;
+  int32 slot = 11;
+  repeated int32 equip = 12;
+  int32 skin = 13;
+  int32 heroCurSkill = 14;
+  bool heroFlag = 15;
+  SEquipInfo SEquip = 16;
+}
+
+message ClientGetFriendInfoNTF {
+  repeated Item friends = 1;
+  int32 vigor = 2;
+  int32 clientGold = 3;
+  int32 gold = 4;
+  int32 page = 5;
+  int32 friendCount = 6;
+  int32 friendApplyCount = 7;
+  int32 status = 8;
+  int32 block = 9;
+}
+
+message ClientFriendApplyREQ {
+  int32 userID = 1;
+}
+
+message ClientFriendApplyACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendApplyNTF {
+  int32 userID = 1;
+  repeated Statistic glory = 2;
+}
+
+message ClientFriendApprovalREQ {
+  int32 userID = 1;
+  int32 result = 2;
+}
+
+message ClientFriendApprovalACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendApprovalNTF {
+  int32 userID = 1;
+  int32 result = 2;
+}
+
+message ClientFriendDelREQ {
+  repeated int32 friendID = 1;
+}
+
+message ClientFriendDelACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendDelNTF {
+  repeated int32 friendID = 1;
+  int32 status = 2;
+}
+
+message ClientFriendSupportGetREQ {
+  string rev = 1;
+}
+
+message ClientFriendSupportGetACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendSupportGetNTF {
+  int32 userID = 1;
+  repeated Support supports = 2;
+}
+
+message ClientFriendSupportChangeREQ {
+  repeated Support supports = 1;
+}
+
+message ClientFriendSupportChangeACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendSupportChangeNTF {
+  repeated Support supports = 1;
+  repeated GoodsItem goods = 2;
+}
+
+message ClientBattleSupportREQ {
+  string rev = 1;
+}
+
+message ClientBattleSupportACK {
+  int32 errNo = 1;
+}
+
+message ClientBattleSupportNTF {
+  repeated Support supports = 1;
+}
+
+message ClientFriendSupportReapREQ {
+  int32 slot = 1;
+}
+
+message ClientFriendSupportReapACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendSupportReapNTF {
+  repeated Support supports = 1;
+  repeated GoodsItem goods = 2;
+}
+
+message ClientFriendSearchREQ {
+  int32 userID = 1;
+}
+
+message ClientFriendSearchACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendSearchNTF {
+  repeated Item friends = 1;
+}
+
+message ClientFriendInfoREQ {
+  int32 friendID = 1;
+}
+
+message ClientFriendInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendInfoNTF {
+  repeated FriendSupportInfo supports = 1;
+  repeated int32 careerID = 2;
+  int32 roleNum = 3;
+  int32 friendLv = 4;
+  repeated int32 manualID = 5;
+  int32 friendID = 6;
+  string friendNick = 7;
+  string friendRemark = 8;
+  string signature = 9;
+  int32 bRank = 10;
+  int32 bscore = 11;
+  int32 sRank = 12;
+  int32 score = 13;
+  int32 menuRoleID = 14;
+  int32 Favor = 15;
+  int32 head = 16;
+  int32 headFrame = 17;
+  int64 lastTime = 18;
+  int32 online = 19;
+  int32 skin = 20;
+  int32 bRankLevel = 21;
+  int32 championTop = 22;
+}
+
+message ClientFriendSetRemarkREQ {
+  int32 friendID = 1;
+  string remark = 2;
+}
+
+message ClientFriendSetRemarkACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendSetRemarkNTF {
+  int32 friendID = 1;
+  string remark = 2;
+}
+
+message ClientFriendLikeREQ {
+  int32 friendID = 1;
+}
+
+message ClientFriendLikeACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendLikeNTF {
+  repeated GoodsItem Goods = 1;
+  repeated friendInfo friendInfos = 2;
+  int32 count = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+}
+
+message ClientFriendLikeGetREQ {
+  int32 vigor = 1;
+  int32 gold = 2;
+  int64 utime = 3;
+}
+
+message ClientFriendLikeGetACK {
+  int32 errNo = 1;
+}
+
+message ClientFriendLikeGetNTF {
+  int32 vigorCount = 1;
+  int32 goldCount = 2;
+  int64 utime = 3;
+}
+
+message ClientChooseBattleRewardREQ {
+  int32 status = 1;
+}
+
+message ClientChooseBattleRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientChooseBattleRewardNTF {
+  int32 levelID = 1;
+  int32 levelStar = 2;
+  int32 userLevel = 3;
+  int32 userExp = 4;
+  VigorInfo vigor = 5;
+  repeated GoodsItem cost = 6;
+  repeated GoodsItem reward = 7;
+  repeated Hero heroInfos = 8;
+  repeated Statistic glory = 9;
+  repeated Statistic day = 10;
+  repeated Statistic week = 11;
+  repeated Statistic month = 12;
+  repeated int32 activityPos = 13;
+  int32 supportNum = 14;
+  int32 weekCopyNum = 15;
+}
+
+message ClientHighLadderBattleExREQ {
+  int32 type = 1;
+  int32 isBack = 2;
+}
+
+message ClientHighLadderBattleExACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderPlayBackExREQ {
+  string token = 1;
+}
+
+message ClientHighLadderPlayBackExACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderBattleExNTF {
+  string name = 1;
+  int32 score = 2;
+  int32 rank = 3;
+  repeated FighterAttr team = 4;
+  string selfName = 5;
+  int32 selfScore = 6;
+  int32 selfRank = 7;
+  repeated FighterAttr selfTeam = 8;
+  int32 type = 9;
+  BattleVideos video = 10;
+  string token = 11;
+  repeated GoodsItem goods = 12;
+  int32 result = 13;
+  int32 aScore = 14;
+  int32 aRank = 15;
+  int32 dScore = 16;
+  int32 dRank = 17;
+  repeated Statistic day = 18;
+  repeated Statistic week = 19;
+  repeated Statistic month = 20;
+  repeated Statistic glory = 21;
+  repeated int32 aSkin = 22;
+  repeated int32 dSkin = 23;
+  int32 bCount = 24;
+  int32 selfRankLevel = 25;
+  int32 RankLevel = 26;
+  int32 selfRankLevelPercent = 27;
+}
+
+message ClientPVPBackgroundSetREQ {
+  int32 type = 1;
+  int32 count = 2;
+}
+
+message ClientPVPBackgroundSetACK {
+  int32 errNo = 1;
+}
+
+message ClientPVPBackgroundSetNTF {
+  int32 type = 1;
+  int32 count = 2;
+  int64 time = 3;
+  int32 nowCount = 4;
+}
+
+message ClientHighLadderBattleRewardREQ {
+  int32 status = 1;
+}
+
+message ClientHighLadderBattleRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientHighLadderBattleRewardNTF {
+  string token = 1;
+  repeated GoodsItem goods = 2;
+  int32 result = 3;
+  int32 aScore = 4;
+  int32 aRank = 5;
+  int32 dScore = 6;
+  int32 dRank = 7;
+  repeated Statistic day = 8;
+  repeated Statistic week = 9;
+  repeated Statistic month = 10;
+  repeated Statistic glory = 11;
+  int32 selfRankLevel = 12;
+  int32 RankLevel = 13;
+}
+
+message ClientActivityGetREQ {
+  string rev = 1;
+}
+
+message ClientActivityGetACK {
+  int32 errNo = 1;
+}
+
+message ClientActivityGetNTF {
+  repeated ActivityItem events = 1;
+}
+
+message ClientActivityGetRewardREQ {
+  int32 activityId = 1;
+  int32 rewardId = 2;
+  int32 rewardType = 3;
+}
+
+message ClientActivityGetRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientActivityGetRewardNTF {
+  int32 activityId = 1;
+  string reward = 2;
+  repeated GoodsItem goods = 3;
+  int32 rewardCount = 4;
+  int64 rewardTime = 5;
+  repeated Statistic glory = 6;
+  repeated Statistic day = 7;
+  repeated Statistic week = 8;
+  repeated Statistic month = 9;
+  int32 rewardId = 10;
+  repeated GoodsItem cost = 11;
+}
+
+message ClientGetRandShopItemREQ {
+  string rev = 1;
+}
+
+message ClientGetRandShopItemACK {
+  int32 errNo = 1;
+}
+
+message ClientGetRandShopItemNTF {
+  repeated ShopItem items = 1;
+  MonthCard card = 2;
+}
+
+message ClientBuyRandShopItemREQ {
+  int32 id = 1;
+  int64 time = 2;
+  int32 count = 3;
+}
+
+message ClientBuyRandShopItemACK {
+  int32 errNo = 1;
+}
+
+message ClientBuyRandShopItemNTF {
+  int32 id = 1;
+  int32 count = 2;
+  repeated GoodsItem goods = 3;
+  repeated GoodsItem cost = 4;
+  repeated EquipInfo equip = 5;
+  repeated Statistic glory = 6;
+  repeated Statistic day = 7;
+  repeated Statistic week = 8;
+  repeated Statistic month = 9;
+}
+
+message ClientBuyPassesLevelREQ {
+  int32 count = 1;
+}
+
+message ClientBuyPassesLevelACK {
+  int32 errNo = 1;
+}
+
+message ClientBuyPassesLevelNTF {
+  int32 activityId = 1;
+  int32 version = 2;
+  int32 score = 3;
+  int64 uTime = 4;
+  repeated GoodsItem cost = 5;
+  repeated GoodsItem goods = 6;
+  repeated Statistic glory = 7;
+  repeated Statistic day = 8;
+  repeated Statistic week = 9;
+  repeated Statistic month = 10;
+}
+
+message ClientMarqueeNTF {
+  repeated MarqueeItem marquee = 1;
+}
+
+message ClientShareREQ {
+  int32 id = 1;
+}
+
+message ClientShareACK {
+  int32 errNo = 1;
+}
+
+message ClientShareNTF {
+  repeated Statistic glory = 1;
+  repeated Statistic day = 2;
+  repeated Statistic week = 3;
+  repeated Statistic month = 4;
+}
+
+message ClientActivityMoveREQ {
+  int32 id = 1;
+}
+
+message ClientActivityMoveACK {
+  int32 errNo = 1;
+}
+
+message ClientActivityMoveNTF {
+  int32 id = 1;
+}
+
+message ClientCDKeyREQ {
+  string key = 1;
+}
+
+message ClientCDKeyACK {
+  int32 errNo = 1;
+}
+
+message ClientCDKeyNTF {
+  int32 email = 1;
+}
+
+message ClientGetClubInfoREQ {
+  int32 id = 1;
+}
+
+message ClientGetClubInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientGetClubInfoNTF {
+  Club club = 1;
+  repeated Club recommendClub = 2;
+  repeated int32 applyID = 3;
+}
+
+message ClientCreateClubInfoREQ {
+  string name = 1;
+}
+
+message ClientCreateClubInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientCreateClubInfoNTF {
+  int32 id = 1;
+  string name = 2;
+  string notice = 3;
+  int32 level = 4;
+  int32 exp = 5;
+  int32 money = 6;
+  repeated User user = 7;
+  repeated Skill skill = 8;
+  repeated ClientClubChatNTF note = 9;
+  int32 recruitType = 10;
+  int32 recruitLevelLimit = 11;
+  int32 Score = 12;
+  repeated GoodsItem cost = 13;
+  repeated Statistic glory = 14;
+  repeated Statistic day = 15;
+  repeated Statistic week = 16;
+  repeated Statistic month = 17;
+}
+
+message ClientClubDonateREQ {
+  int32 id = 1;
+}
+
+message ClientClubDonateACK {
+  int32 errNo = 1;
+}
+
+message ClientClubDonateNTF {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem goods = 2;
+  int32 id = 3;
+  int32 count = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+}
+
+message ClientJoinClubREQ {
+  int32 id = 1;
+}
+
+message ClientJoinClubACK {
+  int32 errNo = 1;
+}
+
+message ClientJoinClubNTF {
+  Club club = 1;
+  int32 clubId = 2;
+}
+
+message ClientClubSkillREQ {
+  int32 id = 1;
+}
+
+message ClientClubSkillACK {
+  int32 errNo = 1;
+}
+
+message ClientClubSkillNTF {
+  int32 id = 1;
+  repeated Statistic glory = 2;
+  repeated Statistic day = 3;
+  repeated Statistic week = 4;
+  repeated Statistic month = 5;
+  repeated GoodsItem cost = 6;
+}
+
+message ClientAuditClubREQ {
+  int32 userID = 1;
+  int32 audit = 2;
+  int32 clubId = 3;
+}
+
+message ClientAuditClubACK {
+  int32 errNo = 1;
+}
+
+message ClientAuditClubNTF {
+  int32 clubId = 1;
+  int32 result = 2;
+}
+
+message ClientModifyClubREQ {
+  User user = 1;
+  Info info = 2;
+  int32 dismiss = 3;
+}
+
+message ClientModifyClubACK {
+  int32 errNo = 1;
+}
+
+message ClientModifyClubNTF {
+  User user = 1;
+  Info info = 2;
+  int64 dismissTime = 3;
+  int64 calmTime = 4;
+}
+
+message ClientChangeBirthdayREQ {
+  string Birthday = 1;
+}
+
+message ClientChangeBirthdayACK {
+  int32 errNo = 1;
+}
+
+message ClientChangeBirthdayNTF {
+  string Birthday = 1;
+}
+
+message ClientChangeSkinREQ {
+  int32 skin = 1;
+}
+
+message ClientChangeSkinACK {
+  int32 errNo = 1;
+}
+
+message ClientChangeSkinNTF {
+  int32 skin = 1;
+}
+
+message ClientGetLotteryLogREQ {
+  Filter filter = 1;
+  int32 page = 2;
+  int32 clientRecruitIndex = 3;
+}
+
+message ClientGetLotteryLogACK {
+  int32 errNo = 1;
+  int32 extraErrNo = 2;
+}
+
+message ClientGetLotteryLogNTF {
+  int32 total_count = 1;
+  int32 page_num = 2;
+  int32 page_size = 3;
+  int32 total_page = 4;
+  repeated Info log = 5;
+}
+
+message ClientGetServerTimeREQ {
+  string rev = 1;
+}
+
+message ClientGetServerTimeACK {
+  int32 errNo = 1;
+}
+
+message ClientGetServerTimeNTF {
+  int64 time = 1;
+}
+
+message TowerHero {
+  int32 heroID = 1;
+  int32 hP = 2;
+}
+
+message TowerStage {
+  int32 level = 1;
+  uint32 status = 2;
+}
+
+message ClientGetMonthlyTowerREQ {
+}
+
+message ClientGetMonthlyTowerACK {
+  int32 errNo = 1;
+}
+
+message InnerTower {
+  repeated TowerHero innerTowerHero = 1;
+  repeated TowerHero innerEnemyHP = 2;
+  repeated TowerStage innerTowerStage = 3;
+  repeated int32 innerTowerBuff = 4;
+  int32 innerCurLevel = 5;
+  int32 innerHeroResetCnt = 6;
+}
+
+message ClientGetMonthlyTowerNTF {
+  int32 version = 1;
+  int64 openTs = 2;
+  int64 closeTs = 3;
+  int32 curLevel = 4;
+  int32 heroResetCnt = 5;
+  repeated TowerHero towerHero = 6;
+  repeated TowerStage towerStage = 7;
+  repeated TowerHero enemyHP = 8;
+  int32 heroResetCntTotal = 9;
+  InnerTower innerTower = 10;
+  int32 innerTowerResetCnt = 11;
+  int32 innerTopScore = 12;
+  repeated int32 innerClaimedReward = 13;
+  repeated int32 innerTowerBuffSave = 14;
+}
+
+message ClientMonthlyTowerFightREQ {
+  int32 level = 1;
+}
+
+message ClientMonthlyTowerFightACK {
+  int32 errNo = 1;
+}
+
+message ClientMonthlyTowerFightNTF {
+  string weather = 1;
+  BattleVideos video = 2;
+  repeated TowerHero towerHero = 3;
+  repeated GoodsItem reward = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  repeated TowerHero innerTowerHero = 9;
+  int32 innerTopScore = 10;
+  bool leftWin = 11;
+}
+
+message ClientTowerHeroResetREQ {
+}
+
+message ClientTowerHeroResetACK {
+  int32 errNo = 1;
+}
+
+message ClientTowerHeroResetNTF {
+  int32 heroResetCnt = 1;
+  int64 lastResetTs = 2;
+  repeated TowerHero heroInfo = 3;
+  repeated GoodsItem cost = 4;
+  int32 heroResetCntTotal = 5;
+}
+
+message ClientDropInfoREQ {
+  repeated int32 DropID = 1;
+}
+
+message ClientDropInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientDropInfoNTF {
+  repeated DropItem Items = 1;
+}
+
+message ClientSetHeroSkillREQ {
+  int32 heroID = 1;
+  int32 skillLevel = 2;
+}
+
+message ClientSetHeroSkillACK {
+  int32 errNo = 1;
+}
+
+message ClientSetHeroSkillNTF {
+  HeroInfo heroInfo = 1;
+}
+
+message ClientExpansionUPREQ {
+  int32 eventID = 1;
+  int32 expansionID = 2;
+}
+
+message ClientExpansionUPACK {
+  int32 errNo = 1;
+}
+
+message ClientExpansionUPNTF {
+  int32 eventID = 1;
+  int32 expansionLevel = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  repeated GoodsItem cost = 7;
+}
+
+message ClientTwisterGameUPREQ {
+  int32 eventID = 1;
+  int32 targetID = 2;
+}
+
+message ClientTwisterGameUPACK {
+  int32 errNo = 1;
+}
+
+message ClientTwisterGameUPNTF {
+  int32 eventID = 1;
+  int32 poolID = 2;
+  string poolGoods = 3;
+}
+
+message ClientTwisterGameResetREQ {
+  int32 eventID = 1;
+  int32 targetID = 2;
+}
+
+message ClientTwisterGameResetACK {
+  int32 errNo = 1;
+}
+
+message ClientTwisterGameResetNTF {
+  int32 eventID = 1;
+  int32 poolID = 2;
+  string poolGoods = 3;
+}
+
+message ClientTwisterGameLotteryREQ {
+  int32 eventID = 1;
+  int32 targetID = 2;
+  int32 num = 3;
+}
+
+message ClientTwisterGameLotteryACK {
+  int32 errNo = 1;
+}
+
+message ClientTwisterGameLotteryNTF {
+  int32 eventID = 1;
+  int32 poolID = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+  repeated GoodsItem goods = 7;
+  repeated GoodsItem cost = 8;
+  string poolGoods = 9;
+}
+
+message ClientLevelDropInfoREQ {
+  repeated int32 levelID = 1;
+}
+
+message ClientLevelDropInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientLevelDropInfoNTF {
+  repeated item Info = 1;
+}
+
+message ClientGetMonthTowerRankREQ {
+  string rev = 1;
+}
+
+message ClientGetMonthTowerRankACK {
+  int32 errNo = 1;
+}
+
+message ClientGetMonthTowerRankNTF {
+  repeated Item info = 1;
+  Item ownInfo = 2;
+  repeated Item lastInfo = 3;
+  Item lastOwnInfo = 4;
+}
+
+message ClientTaskRewardOneKeyReq {
+  int32 subType = 1;
+}
+
+message ClientTaskRewardOneKeyAck {
+  int32 errNo = 1;
+  repeated Tasks tasks = 2;
+  repeated GoodsItem reward = 3;
+  repeated GoodsItem medal = 4;
+  int32 dayScore = 5;
+  int32 weekScore = 6;
+  int32 monthScore = 7;
+  repeated Statistic glory = 8;
+  repeated Statistic day = 9;
+  repeated Statistic week = 10;
+  repeated Statistic month = 11;
+  repeated Events events = 12;
+}
+
+message NGame {
+  int32 RoleID = 1;
+  int32 Phase = 2;
+  string GameIDs = 3;
+  string GameReward = 4;
+}
+
+message ClientGetNGameInfoREQ {
+  string rev = 1;
+}
+
+message ClientGetNGameInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientGetNGameInfoNTF {
+  repeated NGame GameS = 1;
+}
+
+message ClientNGamePhaseUPREQ {
+  int32 RoleID = 1;
+  int32 Phase = 2;
+  int32 GameID = 3;
+}
+
+message ClientNGamePhaseUPACK {
+  int32 errNo = 1;
+}
+
+message ClientNGamePhaseUPNTF {
+  NGame GameS = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientNGameFinishREQ {
+  int32 RoleID = 1;
+  int32 GameID = 2;
+}
+
+message ClientNGameFinishACK {
+  int32 errNo = 1;
+}
+
+message ClientNGameFinishNTF {
+  NGame GameS = 1;
+}
+
+message ClientNGameRewardREQ {
+  int32 RoleID = 1;
+  int32 GameID = 2;
+}
+
+message ClientNGameRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientNGameRewardNTF {
+  NGame GameS = 1;
+  repeated GoodsItem reward = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientLimitSignReq {
+  int32 id = 1;
+  int32 activityId = 2;
+}
+
+message ClientLimitSignNtf {
+  int32 errNo = 1;
+  repeated Statistic glory = 2;
+  repeated Goods goods = 3;
+}
+
+message ClientLimitSignAck {
+  int32 errNo = 1;
+}
+
+message SpecialEquip {
+  int32 ID = 1;
+  int32 level = 2;
+  int32 grade = 3;
+}
+
+message ClientSEquipMakeREQ {
+  int32 TargetID = 1;
+  int32 HeroID = 2;
+}
+
+message ClientSEquipMakeACK {
+  int32 errNo = 1;
+}
+
+message ClientSEquipMakeNTF {
+  SpecialEquip specialEquip = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientSEquipUPREQ {
+  int32 TargetID = 1;
+  int32 OldLevel = 2;
+  int32 NewLevel = 3;
+}
+
+message ClientSEquipUPACK {
+  int32 errNo = 1;
+}
+
+message ClientSEquipUPNTF {
+  SpecialEquip specialEquip = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientSEquipUPGradeREQ {
+  int32 TargetID = 1;
+  int32 OldLevel = 2;
+  int32 NewLevel = 3;
+}
+
+message ClientSEquipUPGradeACK {
+  int32 errNo = 1;
+}
+
+message ClientSEquipUPGradeNTF {
+  SpecialEquip specialEquip = 1;
+  repeated GoodsItem cost = 2;
+  repeated Statistic glory = 3;
+  repeated Statistic day = 4;
+  repeated Statistic week = 5;
+  repeated Statistic month = 6;
+}
+
+message ClientSummerAwardREQ {
+  string rev = 1;
+}
+
+message ClientSummerAwardACK {
+  int32 errNo = 1;
+}
+
+message ClientSummerAwardNTF {
+  repeated GoodsItem summerAward = 1;
+}
+
+message PayPackInfo {
+  int32 ID = 1;
+  int64 CreateAt = 2;
+  int64 Duration = 3;
+  int32 Group = 4;
+  int32 NextID = 5;
+  bool Status = 6;
+}
+
+message ClientPayPackInfoNTF {
+  repeated PayPackInfo PayPackInfoS = 1;
+}
+
+message ClientUPPayPackREQ {
+  string rev = 1;
+}
+
+message ClientUPPayPackACK {
+  int32 errNo = 1;
+}
+
+message ClientRechargeInfoREQ {
+  string rev = 1;
+}
+
+message ClientRechargeInfoACK {
+  int32 errNo = 1;
+}
+
+message ClientRechargeInfoNTF {
+  repeated GoodsItem goods = 1;
+  repeated event events = 2;
+  repeated ShopInfo shops = 3;
+  int64 monthCardBuyTime = 4;
+  int64 monthCardRemaining = 5;
+  int64 bigMonthCardBuyTime = 6;
+  int32 bigMonthCardVersion = 7;
+  PassesLevel passesLevel = 8;
+  repeated PayCard cards = 9;
+}
+
+message ClientRegressionOnceAwardREQ {
+  string rev = 1;
+}
+
+message ClientRegressionOnceAwardACK {
+  int32 errNo = 1;
+}
+
+message ClientRegressionOnceAwardNTF {
+  repeated GoodsItem Goods = 1;
+  Regression regression = 2;
+}
+
+message ClientRegressionSignAwardREQ {
+  repeated int32 id = 1;
+}
+
+message ClientRegressionSignAwardACK {
+  int32 errNo = 1;
+}
+
+message ClientRegressionSignAwardNTF {
+  repeated GoodsItem Goods = 1;
+  Regression regression = 2;
+}
+
+message ClientLightDarkRecruitREQ {
+  int32 recruitID = 1;
+  int32 count = 2;
+  bool isFree = 3;
+  int32 channel = 4;
+  int32 clientRecruitIndex = 5;
+  int32 gachaType = 6;
+}
+
+message ClientLightDarkRecruitACK {
+  int32 errNo = 1;
+}
+
+message ClientLightDarkRecruitNTF {
+  repeated Hero heros = 1;
+  repeated GoodsItem cost = 2;
+  LightDarkFreeTime LightDarkFreeTime = 3;
+  repeated Statistic glory = 4;
+  repeated Statistic day = 5;
+  repeated Statistic week = 6;
+  repeated Statistic month = 7;
+  int32 recruitId = 8;
+  int32 recruitIndex = 9;
+}
+
+message LightDarkFreeTime {
+  int64 freeTime = 1;
+  int32 count = 2;
+  int32 ID = 3;
+}
+
+message ClientShopListReq {
+}
+
+message ClientShopListAck {
+  int32 errNo = 1;
+}
+
+message ClientShopListNtf {
+  repeated ShopUnit shopList = 1;
+}
+
+message ClientInnerTowerHeroResetREQ {
+}
+
+message ClientInnerTowerHeroResetACK {
+  int32 errNo = 1;
+}
+
+message ClientInnerTowerHeroResetNTF {
+  int32 heroResetCnt = 1;
+}
+
+message ClientInnerTowerResetREQ {
+}
+
+message ClientInnerTowerResetACK {
+  int32 errNo = 1;
+}
+
+message ClientInnerTowerResetNTF {
+  InnerTower innerTower = 1;
+  int32 innerTowerResetCnt = 2;
+  int32 innerTopScore = 3;
+  repeated int32 innerClaimedReward = 4;
+  repeated int32 innerBuffSave = 5;
+}
+
+message ClientInnerTowerBuffSelectREQ {
+  repeated int32 buffIDs = 1;
+}
+
+message ClientInnerTowerBuffSelectACK {
+  int32 errNo = 1;
+}
+
+message ClientInnerTowerBuffSelectNTF {
+  repeated int32 innerBuff = 1;
+}
+
+message ClientInnerTowerGetPtRewardREQ {
+  repeated int32 claimID = 1;
+}
+
+message ClientInnerTowerGetPtRewardACK {
+  int32 errNo = 1;
+}
+
+message ClientInnerTowerGetPtRewardNTF {
+  repeated GoodsItem reward = 1;
+  repeated int32 innerClaimedReward = 2;
+}
+
+message ClientLimitSign2Req {
+  int32 activityID = 1;
+}
+
+message ClientLimitSign2Ack {
+  int32 errNo = 1;
+}
+
+message ClientLimitSign2Ntf {
+  repeated Statistic glory = 1;
+  repeated Goods goods = 2;
+  LimitSignUnit info = 3;
+}
+
+message ClientMonthlyTowerScoreNtf {
+  int32 topScore = 1;
+  repeated int32 claimedRewards = 2;
+}
+
+message ClientFriendFightReq {
+  int32 userID = 1;
+}
+
+message ClientFriendFightAck {
+  int32 errNo = 1;
+}
+
+message ClientFriendFightNtf {
+  BattleVideos video = 1;
+  bool leftWin = 2;
+  string defName = 3;
+  repeated FighterAttr defTeam = 4;
+  string selfName = 5;
+  repeated FighterAttr selfTeam = 6;
+  repeated int32 aSkin = 7;
+  repeated int32 dSkin = 8;
+}
+
+message ClientCakeBuildReq {
+  int32 cakeID = 1;
+}
+
+message ClientCakeBuildAck {
+  int32 errNo = 1;
+}
+
+message ClientCakeBuildNtf {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem reward = 2;
+}
+
+message ClientSendGiftReq {
+  int32 cfgID = 1;
+  int32 giftID = 2;
+}
+
+message ClientSendGiftAck {
+  int32 errNo = 1;
+}
+
+message ClientSendGiftNtf {
+  repeated GoodsItem cost = 1;
+  repeated GoodsItem reward = 2;
+  GiftItem gift = 3;
+}
+
+message ClientReturnGiftReq {
+  int32 cfgID = 1;
+}
+
+message ClientReturnGiftAck {
+  int32 errNo = 1;
+}
+
+message ClientReturnGiftNtf {
+  repeated GoodsItem reward = 3;
+}
+
+message ClientGetGiftInfoReq {
+  int32 activityID = 1;
+}
+
+message ClientGetGiftInfoAck {
+  int32 errNo = 1;
+}
+
+message ClientGetGiftInfoNtf {
+  repeated GiftItem gift = 1;
+}
+
+message ClientLimitSign2LoginNtf {
+  repeated LimitSignUnit info = 1;
+}
+
+message ClientLimitSign2InfoReq {
+}
+
+message ClientLimitSign2InfoAck {
+  int32 errNo = 1;
+}
+
+message ClientLimitSign2InfoNtf {
+  repeated Statistic glory = 1;
+  repeated Goods goods = 2;
+  repeated LimitSignUnit info = 3;
+}
+
+message ClientSelectUpNtf {
+  repeated Item lotteryInfo = 1;
+}
+
+message ClientGetPoolPropsReq {
+  int32 lotteryID = 1;
+}
+
+message ClientGetPoolPropsAck {
+  int32 errNo = 1;
+}
+
+message ClientGetPoolPropsNtf {
+  repeated Item poolInfo = 1;
+  int32 lotteryID = 2;
+}
+
+message ClientSelectUpGachaReq {
+  int32 lotteryID = 1;
+  int32 count = 2;
+  int32 channel = 3;
+  int32 clientRecruitIndex = 4;
+}
+
+message ClientSelectUpGachaAck {
+  int32 errNo = 1;
+}
+
+message ClientSelectUpGachaNtf {
+  repeated Hero heros = 1;
+  repeated GoodsItem cost = 2;
+  int32 up = 3;
+  int32 count = 4;
+  repeated Statistic glory = 5;
+  repeated Statistic day = 6;
+  repeated Statistic week = 7;
+  repeated Statistic month = 8;
+  int32 recruitId = 9;
+  repeated GoodsItem goods = 10;
+  int32 recruitIndex = 11;
+}
+
+message ClientSelectRoleUpReq {
+  int32 lotteryID = 1;
+  repeated int32 roleID = 2;
+}
+
+message ClientSelectRoleUpAck {
+  int32 errNo = 1;
+}
+
+message ClientSelectRoleUpNtf {
+  int32 lotteryID = 1;
+  repeated int32 roleID = 2;
+}
+
+message ClientGetMoonPVPRankReq {
+}
+
+message ClientGetMoonPVPRankAck {
+  int32 errNo = 1;
+}
+
+message ClientGetMoonPVPRankNtf {
+  repeated Item info = 1;
+  Item ownInfo = 2;
+  int32 selfTotalWinCount = 3;
+  int32 usedFree = 4;
+  int32 totalFree = 5;
+  int32 curWinContinue = 6;
+  int32 maxWinContinue = 7;
+  int32 winCoverLeft = 8;
+}
+
+message ClientMoonPVPFightReq {
+  bool paid = 1;
+}
+
+message ClientMoonPVPFightAck {
+  int32 errNo = 1;
+}
+
+message ClientMoonPVPFightFirstNtf {
+  string atkName = 1;
+  repeated FighterAttr atkTeam = 2;
+  repeated int32 atkSkin = 3;
+  string defName = 4;
+  repeated FighterAttr defTeam = 5;
+  repeated int32 defSkin = 6;
+  BattleVideos video = 7;
+  string token = 8;
+  int32 result = 9;
+}
+
+message ClientMoonPVPFightSecondNtf {
+  string atkName = 1;
+  repeated FighterAttr atkTeam = 2;
+  repeated int32 atkSkin = 3;
+  string defName = 4;
+  repeated FighterAttr defTeam = 5;
+  repeated int32 defSkin = 6;
+  BattleVideos video = 7;
+  string token = 8;
+  int32 result = 9;
+  repeated int32 atkScore = 10;
+  repeated int32 defScore = 11;
+  repeated GoodsItem goods = 12;
+  int32 matchResult = 13;
+  repeated Statistic day = 14;
+  repeated Statistic week = 15;
+  repeated Statistic month = 16;
+  repeated Statistic glory = 17;
+  repeated GoodsItem cost = 18;
+  int32 usedFree = 19;
+  int32 totalFree = 20;
+  int32 winCoverLeft = 21;
+}
+
+message ClientGetMoonPVPRecordReq {
+}
+
+message ClientGetMoonPVPRecordAck {
+  int32 errNo = 1;
+}
+
+message ClientGetMoonPVPRecordNtf {
+  repeated Item records = 1;
+}
+
+message Props {
+  int32 field = 1;
+  int64 value = 2;
+}
+
+message Fighter {
+  int32 uID = 1;
+  int32 cfgID = 2;
+  int32 pos = 3;
+  bool isLeft = 4;
+  bool Init = 5;
+  repeated Props props = 6;
+}
+
+message BuffInfo {
+  int32 buffID = 1;
+  int32 skillID = 2;
+  int32 duration = 3;
+}
+
+message FightChange {
+  int32 uID = 1;
+  repeated int64 damage = 2;
+  repeated int32 shield = 3;
+  repeated Props props = 4;
+  repeated BuffInfo buffs = 5;
+}
+
+message VideoSkill {
+  int32 skillID = 1;
+  int32 atk = 2;
+  int32 def = 3;
+  repeated FightChange changes = 4;
+}
+
+message Action {
+  int32 checkPt = 1;
+  repeated VideoSkill skills = 2;
+}
+
+message StageVideo {
+  int32 round = 1;
+  int32 turn = 2;
+  int32 atk = 3;
+  int32 def = 4;
+  repeated Action actions = 5;
+}
+
+message RoundAtkOrder {
+  int32 round = 1;
+  repeated int32 atkOrder = 2;
+  repeated TurnItem turnChanges = 3;
+}
+
+message BattleVideos {
+  bool leftWin = 1;
+  repeated Fighter fighters = 2;
+  repeated StageVideo videos = 3;
+  repeated RoundAtkOrder atkOrders = 4;
+}
+
+message ClientSaveErrorInfoReq {
+  repeated Item errs = 1;
+}
+
+message ClientSaveErrorInfoAck {
+  int32 errNo = 1;
+}
+
+message ClientSkinRandomReq {
+  int32 goodsID = 1;
+}
+
+message ClientSkinRandomAck {
+  int32 errNo = 1;
+}
+
+message ClientSkinRandomNtf {
+  repeated SkinRandomInfo skinRandomInfo = 1;
+  int32 goodsID = 2;
+}
+
+message ClientGetLadderScoreInfoReq {
+}
+
+message ClientGetLadderScoreInfoAck {
+  int32 errNo = 1;
+}
+
+message ClientGetLadderScoreInfoNtf {
+  int32 season = 1;
+  int32 subVersion = 2;
+  TryHeroPropInfo items = 3;
+}
+
+message ClientGetChampionScoreRankReq {
+  int32 version = 1;
+}
+
+message ClientGetChampionScoreRankAck {
+  int32 errNo = 1;
+}
+
+message ClientGetChampionScoreRankNtf {
+  repeated Item info = 1;
+  Item ownInfo = 2;
+}
+
+message ChampionDeploy {
+  repeated Item deploy = 1;
+}
+
+message ChampionMember {
+  int32 rank = 1;
+  string nike = 2;
+  int32 head = 3;
+  int32 headFrame = 4;
+  int32 level = 5;
+  string title = 6;
+  int32 id = 7;
+  int32 menuRoleID = 8;
+  ChampionDeploy atk = 9;
+  ChampionDeploy def = 10;
+  int32 oldScoreRank = 11;
+}
+
+message ClientGetChampionMatchREQ {
+  int32 version = 1;
+}
+
+message ClientGetChampionMatchACK {
+  int32 errNo = 1;
+}
+
+message ChampionMatchInfo {
+  ChampionMember player1 = 1;
+  ChampionMember player2 = 2;
+  int32 winner = 3;
+  string battleToken1 = 4;
+  string battleToken2 = 5;
+  int32 matchID = 6;
+}
+
+message ClientGetChampionMatchNTF {
+  int32 version = 1;
+  int32 prepareStart = 2;
+  int32 frozenStart = 3;
+  int32 rewardStart = 4;
+  repeated ChampionMatchInfo sixteen = 5;
+  repeated ChampionMatchInfo eight = 6;
+  repeated ChampionMatchInfo four = 7;
+  ChampionMatchInfo thirdPlace = 8;
+  ChampionMatchInfo champion = 9;
+  int32 ticketLeft = 10;
+  int32 totalEnd = 11;
+  int32 isDeploy = 12;
+  repeated VoteHistory record = 13;
+}
+
+message HistoryMember {
+  ChampionMember Player = 1;
+  repeated FighterAttr atk = 2;
+  repeated FighterAttr def = 3;
+  repeated int32 atkSkin = 4;
+  repeated int32 defSkin = 5;
+}
+
+message ChampionHistory {
+  int32 version = 1;
+  repeated HistoryMember member = 2;
+}
+
+message ClientGetChampionHistoryREQ {
+}
+
+message ClientGetChampionHistoryACK {
+  int32 errNo = 1;
+}
+
+message ClientGetChampionHistoryNTF {
+  repeated ChampionHistory info = 1;
+}
+
+message ClientChampionVoteREQ {
+  int32 matchID = 1;
+  int32 votePlayer = 2;
+  int32 voteNum = 3;
+}
+
+message ClientChampionVoteACK {
+  int32 errNo = 1;
+}
+
+message VoteHistory {
+  int32 matchID = 1;
+  int32 voteForPlayer = 2;
+  int32 voteNum = 3;
+  uint64 winner = 4;
+  int32 voteChange = 5;
+}
+
+message ClientChampionVoteNTF {
+  int32 ticketLeft = 1;
+  repeated VoteHistory record = 2;
+}
+
+message ClientActivityListREQ {
+}
+
+message ClientActivityListACK {
+  int32 errNo = 1;
+}
+
+message ClientActivityListNTF {
+  repeated TimeInfo timeInfo = 1;
+}
+
+message ClientSetSEquipOffREQ {
+  int32 heroID = 1;
+  int32 sEquipOff = 2;
+}
+
+message ClientSetSEquipOffACK {
+  int32 errNo = 1;
+}
+
+message ClientSetSEquipOffNTF {
+  int32 heroID = 1;
+  int32 sEquipOff = 2;
+}
+
+message ClientSetFriendBlockReq {
+  int32 status = 1;
+}
+
+message ClientSetFriendBlockAck {
+  int32 errNo = 1;
+}
+
+message ClientSetFriendBlockNtf {
+  int32 status = 1;
+}
+
+message ClientOpenNewActivityNtf {
+  repeated int32 openActivity = 1;
+  repeated TimeInfo newTimeData = 2;
+}
+
+message ClientBingoInfoReq {
+  int32 activityId = 1;
+}
+
+message ClientBingoInfoAck {
+  int32 errNo = 1;
+}
+
+message ClientBingoInfoNtf {
+  repeated BingoInfo point = 1;
+}
+
+message BingoInfo {
+  int32 stage = 1;
+  int32 x = 2;
+  int32 y = 3;
+  repeated GoodsItem goods = 4;
+}
+
+message ClientBingoDrawReq {
+  int32 activityId = 1;
+  int32 stage = 2;
+  int32 x = 3;
+  int32 y = 4;
+}
+
+message ClientBingoDrawAck {
+  int32 errNo = 1;
+}
+
+message ClientBingoDrawNtf {
+  repeated BingoInfo point = 1;
+}
+
+message ClientGetChampionHistoryTeamREQ {
+  int32 Version = 1;
+  int32 PlayerID = 2;
+}
+
+message ClientGetChampionHistoryTeamACK {
+  int32 errNo = 1;
+}
+
+message ClientGetChampionHistoryTeamNTF {
+  repeated FighterAttr atk = 1;
+  repeated FighterAttr def = 2;
+  repeated int32 atkSkin = 3;
+  repeated int32 defSkin = 4;
+}
+
